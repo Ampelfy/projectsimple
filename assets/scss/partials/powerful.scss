@@ -1,6 +1,20 @@
 .powerful {
     position: relative;
     margin: 160px 0;
+    .container {
+        &::before {
+            content: '';
+            position: absolute;
+            top: -730px;
+            left: 0px;
+            background-image: url(../images/powerful-vector-left.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 1119px;
+            height: 1133px;
+            z-index: -1;
+        }
+    }
     .titleblock {
         text-align: center;
     }

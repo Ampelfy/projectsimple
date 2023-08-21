@@ -11,14 +11,28 @@
     justify-content: center;
     overflow: hidden;
     z-index: 2;
-    .container {
+    .container > {
         text-align: center;
+        p {
+            color: $color1;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30.6px;
+            text-align: center;
+            a {
+                color: $color1;
+                text-decoration: underline;
+                font-weight: 600;
+            }
+        }
     }
 }
 
 .ctatitle {
     display: flex;
     text-align: center;
+    flex-direction: column;
     z-index: 2;
     &::after {
         content: '';
@@ -38,8 +52,16 @@
         font-style: normal;
         font-weight: 700;
         line-height: 70px;
-        margin-bottom: 33px;
+        // margin-bottom: 33px;
         z-index: 2;
+    }
+    p {
+        margin-top: 16px;
+        color: $color1;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 34px;
     }
     span {
         position: relative;
@@ -65,3 +87,32 @@
     }
 }
 
+
+
+
+.cta {
+}
+.container {
+}
+.ctatitle {
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 33px 0 63px 0;
+    .btn {
+        margin-right: 24px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.btn {
+}
+.btntrial {
+
+		// .btntrial_white
+
+		&_white {
+		}
+}
