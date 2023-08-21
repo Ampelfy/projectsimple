@@ -2,9 +2,9 @@
 // Solution styles
 //====================================================================================================
 .solution {
-    margin: 160px 0;
+    @include block;
     .titleblock {
-        flex: 0 0 50%;
+        flex: 0 0 53%;
         &__title {
         text-align: left;
         width: 530px;
@@ -21,23 +21,22 @@
     }
 }
 .menusolution {
-    flex: 0 0 50%;
+    flex: 0 0 47%;
 		// .menusolution__list
 		&__list {
             margin-left: auto;
 		}
 		// .menusolution__item
 		&__item {
+            display: inline-block;
             color: $color7;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: 27px;
-            border-radius: 1px 32px 32px 1px;
+            border-radius: 2px 32px 32px 2px;
             border-left: 4px solid rgba(80, 64, 209, 0.50);
             background: $color1;
-            display: flex;
-            align-items: center;
             padding: 16px 24px;
             margin-bottom: 24px;
             &:last-child {

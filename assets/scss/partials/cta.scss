@@ -1,9 +1,8 @@
 //====================================================================================================
 // CTA styles
 //====================================================================================================
-
 .cta {
-    position: relative;
+    @include block;
     background: linear-gradient(90deg, #705AD8 0%, #8666FD 54.69%, #696CEF 100%);
     padding: 60px 0 70px 0;
     display: flex;
@@ -31,8 +30,6 @@
 
 .ctatitle {
     display: flex;
-    text-align: center;
-    flex-direction: column;
     z-index: 2;
     &::after {
         content: '';
@@ -69,7 +66,7 @@
         font-size: 14px;
         font-style: normal;
         font-weight: 800;
-        line-height: normal;
+        line-height: 18px;
         background: #E583FF;
         padding: 6px 16px;
         height: 29px;

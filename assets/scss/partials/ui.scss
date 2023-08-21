@@ -7,10 +7,22 @@
     display: flex;
 }
 
+.column {
+    flex-direction: column;
+}
+
+.dblock {
+    display: block;
+}
+
+.m-auto {
+    margin:  0 auto;
+}
+
 //Buttonn 
 .btn {
     position: relative;
-    display: inline-flex;
+    display: block;
     width: 217px;
     padding: 20px 30px;
     border-radius: 38px;
