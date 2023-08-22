@@ -135,123 +135,14 @@ document.addEventListener('keydown', function (e) {
 	}
 });
 
-$('ul.tab-list').on('click', 'li:not(.active)', function () {
-        
-	$(this)
-		.addClass('active').siblings().removeClass('active')
-		.closest('.wrapperslider').find('.tab-content__item').removeClass('active').eq($(this).index()).addClass('active');
-	   //$('.slider2').slick('reinit'); 
-});
-
-$('.slider1').slick({
-	autoplay: false,
-	autoplaySpeed: 1000,
-	fade: false,
-	arrows: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	cssEase: 'linear',
-});
-
-$('.slider2').slick({
-	autoplay: false,
-	autoplaySpeed: 1000,
-	fade: false,
-	arrows: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	cssEase: 'linear',
-});
-
-$('.slider3').slick({
-	autoplay: false,
-	autoplaySpeed: 1000,
-	fade: false,
-	arrows: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	cssEase: 'linear',
-});
-
-$('.slider4').slick({
-	autoplay: false,
-	autoplaySpeed: 1000,
-	fade: false,
-	arrows: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	cssEase: 'linear',
-});
-
-// $(".projectsimple-item").slick({
-// 	dots: true,
-// 	infinity: true,
-// 	speed: 500,
-// 	slidesToShow: 1,
-// 	slidesToScroll: 1,
-// 	arrows: true,
-// });
-
-
-// $(function() {
-// 	$('.js-customize').slick({
-// 		autoplay: false,
-// 		autoplaySpeed: 1000,
-// 		fade: true,
-// 		arrows: true,
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 		cssEase: 'linear',
-// 	});
-  
-// 	$('.js-assistant').slick({
-// 		autoplay: false,
-// 		autoplaySpeed: 1000,
-// 		fade: true,
-// 		arrows: true,
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 		cssEase: 'linear',
-// 	});
-
-// 	$('.js-chatBot').slick({
-// 		autoplay: false,
-// 		autoplaySpeed: 1000,
-// 		fade: true,
-// 		arrows: true,
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 		cssEase: 'linear',
-// 	});
-  
-// 	$('.js-sprint').slick({
-// 		autoplay: false,
-// 		autoplaySpeed: 1000,
-// 		fade: true,
-// 		arrows: true,
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 		cssEase: 'linear'
-// 	});
-	
-// 	$('.js-tabs-item:not(:first)').hide();
-// 	  $('.js-tabs-link').on('click', function (e) {
-// 		  e.preventDefault();
-// 		  var tabLink = $(this);
-// 		  var target = $(this.hash);
-// 		  $('.js-tabs-text').removeClass('m-active');
-// 		  $('.js-tabs-item:visible').fadeOut("100", function () {
-// 			  tabLink.children().addClass('m-active');
-// 			  target.fadeIn("100", function() {
-// 		  $('.js-assistant').slick("reinit"); 
-// 		  $('.js-chatBot').slick("reinit"); 
-// 		  $('.js-sprint').slick("reinit"); 
-// 		});
-// 		  });
-// 	  });
-//   });
-
-//customize
-//assistant
-//chatBot
-//sprint 
+//=================
+//Swiper
+const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	loop: true,
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  });
