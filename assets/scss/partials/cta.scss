@@ -31,6 +31,7 @@
 .ctatitle {
     display: flex;
     z-index: 2;
+    margin-bottom: 33px;
     &::after {
         content: '';
         position: absolute;

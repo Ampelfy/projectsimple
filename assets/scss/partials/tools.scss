@@ -1,16 +1,26 @@
 //====================================================================================================
 // Tools styles
 //====================================================================================================
+
+
+
 .tools {
     position: relative;
     margin: 160px 0;
-}
-
-.tools {
     ._tabs {
         display: flex;
         justify-content: space-between;
         margin-top: 80px;
+    }
+
+    .titleblock {
+        // .titleblock__title
+        &__title {
+            text-align: left;
+        }
+        // .titleblock__description
+        &__description {
+        }
     }
     
     .tabs-block {
@@ -29,6 +39,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
+            margin-top: 20px;
         }
     }
     
