@@ -20,7 +20,6 @@
 }
 
 //Buttonn 
-
 .btnsmall {
     position: relative;
     padding: 14px 44px 14px 24px;
@@ -60,6 +59,16 @@
             }
         }
     }
+    &_nobg {
+        background: transparent;
+        color: $color5;
+        &:hover {
+            color: $color12;
+        }
+        &:active {
+            color: $color12;
+        }
+    }
 }
 
 .btnmedium {
@@ -73,6 +82,7 @@
     text-transform: capitalize;
     @include transition200;
     &_nobg {
+        background: transparent;
         border: 2px solid $color1;
         box-shadow: 0px 30px 40px -15px $color12;
         color: $color1;
@@ -183,111 +193,6 @@
         }
     }
 }
-
-//Buttonn 
-// .btn {
-//     position: relative;
-//     display: block;
-//     width: 217px;
-//     padding: 20px 30px;
-//     border-radius: 38px;
-//     font-size: 16px;
-//     font-style: normal;
-//     font-weight: 600;
-//     line-height: normal;
-//     transition: $transition200;
-//     box-shadow: 0px 30px 40px -15px rgba(112, 90, 216, 0.40);
-//     text-align: left;
-// }
-// .btnsign {
-//     // .btnsign_blue
-//     &_blue {
-//     }
-//     // .btnsign_white
-//     &_white {
-//     } 
-// }
-// .btntrial {
-// 		// .btntrial_blue
-// 		&_blue {
-//             background: linear-gradient(90deg, #3126CA 0%, #705AD8 100%);
-//             color: $color1;
-//             &:hover {
-//                 background: linear-gradient(90deg, #8666FD 0%, #3291FD 100%);
-//                 transition: $transition200;
-//             }
-//             &:active {
-//                 background: linear-gradient(90deg, #7251EF 0%, #2C84E9 100%);
-//                 transition: $transition200;
-//             }
-//             &::after {
-//                 content: '';
-//                 position: absolute;
-//                 top: 21px;
-//                 right: 31px;
-//                 background-image: url(../images/arrow-right.png);
-//                 width: 22px;
-//                 height: 22px;
-//             }
-// 		}
-//         // .btntrial_white
-//         &_white {
-//             background-color: $color1;
-//             color: $color12;
-//             &:hover {
-//                 background: linear-gradient(90deg, #E583FF 0%, #DE61FF 100%);
-//                 color: $color1;
-//                 &::after {
-//                     content: '';
-//                     background-image: url(../images/arrow-right.png);
-//                 }
-//             }
-//             &:active {
-//                 background: linear-gradient(90deg, #E583FF 0%, #C93AEF 100%);
-//                 color: $color1;
-//                 &::after {
-//                     content: '';
-//                     background-image: url(../images/arrow-right.png);
-//                 }
-//             }
-//             &::after {
-//                 content: '';
-//                 position: absolute;
-//                 top: 21px;
-//                 right: 31px;
-//                 background-image: url(../images/arrow-right-blue.png);
-//                 width: 22px;
-//                 height: 22px;
-//             }
-// 		}
-
-//         &_nobg {
-//             color: $color1;
-//             border-radius: 38px;
-//             border: 2px solid $color1;
-//             box-shadow: 0px 30px 40px -15px #6D57D1;
-//             &:hover {
-//                 background: $color1;
-//                 color: $color12;
-//                 &::after {
-//                     content: '';
-//                     background-image: url(../images/arrow-right-blue.png);
-//                 }
-//             }
-//             &:active {
-                
-//             }
-//             &:after {
-//                 content: '';
-//                 position: absolute;
-//                 top: 21px;
-//                 right: 31px;
-//                 background-image: url(../images/arrow-right.png);
-//                 width: 22px;
-//                 height: 22px;
-//             }
-//         }
-// }
 
 // Title Block
 .titleblock {

@@ -60,36 +60,6 @@
                 margin-right: 0;
             }
 		}
-		// .auth__link
-		&__link {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            color: $color5;
-		}
-        // .auth__item-signup
-        &__item-signup {
-            width: 122px;
-            background: $color3;
-            padding: 14px 24px;
-            border-radius: 30px;
-        }
-        // .auth__link-signup
-        &__link-signup {
-            position: relative;
-            color: $color12;
-            font-weight: 600;
-            &::after {
-                content: '';
-                position: absolute;
-                top: 6px;
-                right: -18px;
-                background-image: url(../images/arrow-right-2.png);
-                width: 5px;
-                height: 9px;
-            }
-        }
 }
 
 
