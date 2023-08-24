@@ -12,12 +12,13 @@
             justify-content: center;
         }
         .powered {
-            position: absolute;
-            right: 160px;
-            top: -6px;
+            position: static;
+            // right: 160px;
+            // top: -6px;
             height: 37px;
             background-color: $color1;
             padding: 8px 16px;
+            margin-left: 10px;
             p {
                 position: relative;
                 font-size: 14px;

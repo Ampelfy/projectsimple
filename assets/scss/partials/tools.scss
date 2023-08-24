@@ -27,6 +27,9 @@
         // .tabs-block__nav
         &__nav {
             flex: 0 0 19%;
+            @media (max-width: 1366px) {
+                flex: 0 0 22%;
+            }
         }
         // .tabs-block__body
         &__body {

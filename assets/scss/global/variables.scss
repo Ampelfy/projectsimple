@@ -7,7 +7,7 @@ $minWidth: 320;
 $maxWidth: 1920;
 $container: 1600;
 $maxWidthContainer: 1170;
-$md1: $maxWidthContainer+12;
+$md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -30,4 +30,5 @@ $color14: #3126ca;
 $color15: #de61ff;
 
 // Transition
-$transition200: hover .5s ease-in-out;
+$transition200: hover .2s ease-in-out;
+$transition300: hover .3s ease-in-out;
