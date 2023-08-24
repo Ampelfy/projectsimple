@@ -1,6 +1,5 @@
 .testimonials {
-    position: relative;
-    margin: 160px 0;
+    @include block;
     .container {
         display: flex;
         justify-content: center;
@@ -17,8 +16,8 @@
             height: 2000px;
             z-index: -1;
         }
-        .leftblock > {
-            flex: 0 0 31.333%;
+        .leftblock {
+            flex: 0 0 32%;
             p {
                 margin-top: 30px;
             }

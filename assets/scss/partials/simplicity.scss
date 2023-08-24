@@ -1,5 +1,5 @@
 .simplicity {
-    margin: 160px 0;
+    @include block;
     .titleblock {
         text-align: center;
         // .titleblock__title

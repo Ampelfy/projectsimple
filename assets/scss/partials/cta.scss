@@ -10,7 +10,7 @@
     justify-content: center;
     overflow: hidden;
     z-index: 2;
-    .container > {
+    .container {
         text-align: center;
         p {
             color: $color1;
@@ -94,17 +94,17 @@
 }
 .ctatitle {
 }
-.buttons {
-    display: flex;
-    justify-content: center;
-    margin: 33px 0 63px 0;
-    .btn {
-        margin-right: 24px;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
+// .buttons {
+//     display: flex;
+//     justify-content: center;
+//     margin: 33px 0 63px 0;
+//     .btn {
+//         margin-right: 24px;
+//         &:last-child {
+//             margin-right: 0;
+//         }
+//     }
+// }
 .btn {
 }
 .btntrial {

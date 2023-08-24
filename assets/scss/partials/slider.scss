@@ -23,21 +23,9 @@
     background: $color1;
 }
 
-// .swiper-button-prev, .swiper-rtl .swiper-button-next {
-//     left: var(--swiper-navigation-sides-offset,300px) !important;
-// }
-
-// .swiper-button-next, .swiper-rtl .swiper-button-prev {
-//     right: var(--swiper-navigation-sides-offset,300px) !important;
-// }
-
-// .swiper-button-next, .swiper-button-prev {
-//     top: var(--swiper-navigation-top-offset,480px) !important;
-// }
-
 .swiper-button-prev:after {
     content: '' !important;
-    background-image: url(../images/icons/slider-arrow-left.svg);
+    background-image: url(../images/icons/arrow-left.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 17.7px;
@@ -46,26 +34,25 @@
 
 .swiper-button-next:after {
     content: '' !important;
-    background-image: url(../images/icons/1.png);
+    background-image: url(../images/icons/arrow-right.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 17.7px;
     height: 13.5px;
+    @include transition200;
     &:hover {
         background-image: url(../images/icons/2.png);
     }
 }
 
+.swiper-button-prev:hover:after {
+    background-image: url(../images/icons/arrow-left-hover.png);
+}
+
+.swiper-button-next:hover:after {
+    background-image: url(../images/icons/arrow-right-hover.png);
+}
+
 .swiper-button-next, .swiper-button-prev {
     top: var(--swiper-navigation-top-offset,30%) !important;
 }
-
-// .swiper-button-next {
-//     svg {
-//     width: 17.7px; 
-//     height: 13.5px;
-//         &:hover {
-//             fill: #696CEF;
-//         }
-//     }
-// }
