@@ -1,5 +1,15 @@
 .testimonials {
     @include block;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -160px;
+        left: 0;
+        background-image: url(../images/vector-left-3.png);
+        width: 700px;
+        height: 1196px;
+        z-index: -1;
+    }
     .container {
         display: flex;
         justify-content: center;

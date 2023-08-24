@@ -5,6 +5,16 @@
 .patterns {
     position: relative;
     background-color: $color1;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../images/vector-left-2.png);
+        width: 700px;
+        height: 1196px;
+        z-index: -1;
+    }
     .titleblock {
         text-align: center;
 		// .titleblock__title

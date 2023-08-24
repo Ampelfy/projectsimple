@@ -46,25 +46,6 @@ body {
 		background-color: #000;
 		color: #fff;
 	}
-	// &::before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 776px;
-	// 	left: 0px;
-	// 	background-image: url(../images/body-vector-left.png);
-	// 	width: 494px;
-	// 	height: 1162px;
-	// }
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		background-image: url(../images/body-vector-right.png);
-		width: 508px;
-		height: 2168px;
-		z-index: -1;
-	}
 }
 
 

@@ -1,5 +1,3 @@
-'user strick'
-
 //=================
 //Menu
 let iconMenu = document.querySelector(".icon-menu");
@@ -133,6 +131,21 @@ document.addEventListener('keydown', function (e) {
 	if (e.code === 'Escape') {
 		popup_close();
 	}
+});
+
+//=================
+//Scroll to top
+var btn = $('#scrollToTop');
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
 });
 
 //=================

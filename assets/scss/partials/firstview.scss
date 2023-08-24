@@ -3,6 +3,25 @@
 //====================================================================================================
 .firstview {
     @include block;
+    	&::before {
+		content: '';
+		position: absolute;
+		top: 776px;
+		left: -50px;
+		background-image: url(../images/vector-left-1.png);
+		width: 494px;
+		height: 1162px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: -240px;
+		right: 0px;
+		background-image: url(../images/vector-right-1.png);
+		width: 508px;
+		height: 2168px;
+		z-index: -1;
+	}
     // .firstview__top
     &__top {
         position: relative;
