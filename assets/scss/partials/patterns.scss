@@ -3,7 +3,7 @@
 //====================================================================================================
 
 .patterns {
-    position: relative;
+    @include block;
     background-color: $color1;
     &:before {
         content: "";
