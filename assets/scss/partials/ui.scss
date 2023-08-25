@@ -202,6 +202,12 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        @media (max-width: 390px) {
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
         span {
             color: $color1;
             padding: 4px 16px;
@@ -211,7 +217,10 @@
             line-height: normal;
             border-radius: 2px;
             background: linear-gradient(90deg, #3126CA 0%, #705AD8 100%);
-            
+            @media (max-width: 390px) {
+                max-width: none;
+                padding: 0 20px;
+            }
         }
     }
     &__description {
@@ -221,6 +230,10 @@
         font-weight: 600;
         line-height: 34px;
         margin-top: 16px;
+        @media (max-width: 390px) {
+            max-width: none;
+            padding: 0 20px;
+        }
     }
 }
 
