@@ -11,7 +11,7 @@
         &__title {
         text-align: left;
         max-width: 530px;
-        @media (max-width: 390px) {
+        @media (max-width: 490px) {
             max-width: 100%;
             display: flex;
             flex-direction: column;
@@ -36,7 +36,7 @@
     @media (max-width: 1366px) {
         flex: 0 0 56%;
     }
-    @media (max-width: 390px) {
+    @media (max-width: 490px) {
         margin-top: 50px;
     }
 		// .menusolution__list

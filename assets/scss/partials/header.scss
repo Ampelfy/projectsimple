@@ -73,7 +73,9 @@
     position: relative;
     display: none;
     margin-left: auto;
-   
+    @media (max-width: 490px) {
+		display: block;
+	}
     .burger-nav {
         position: relative;
         width: 32px;

@@ -12,7 +12,7 @@
     margin-top: 80px;
     padding: 64px 0;
     background-color: $color1;
-    @media (max-width: 390px) {
+    @media (max-width: 490px) {
         padding: 34px 0;
 	}
 		// .menuteam__list
@@ -40,7 +40,7 @@
                     margin-bottom: 0;
                 }
             }
-            @media (max-width: 390px) {
+            @media (max-width: 490px) {
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -61,7 +61,7 @@
                 @media (max-width: 1366px) {
                     height: 27px;
                 }
-                @media (max-width: 390px) {
+                @media (max-width: 490px) {
                     height: 100%;
                 }
             }
