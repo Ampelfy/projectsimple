@@ -223,6 +223,7 @@
                 font-weight: 700;
                 line-height: normal;
                 padding: 0px 8px;
+                width: max-content;
             }
         }
     }
@@ -260,6 +261,9 @@
 	z-index: 1000;
     transition: $transition200;
     cursor: pointer;
+    @media (max-width: 490px) {
+        display: none;
+    }
     &::after {
         position: absolute;
         content: '';

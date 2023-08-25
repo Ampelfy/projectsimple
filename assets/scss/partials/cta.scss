@@ -10,6 +10,9 @@
     justify-content: center;
     overflow: hidden;
     z-index: 2;
+    @media (max-width: 490px) {
+        padding: 60px 0 55px 0;
+    }
     .container {
         text-align: center;
         p {
@@ -33,6 +36,12 @@
     justify-content: center;
     z-index: 2;
     margin-bottom: 33px;
+    @media (max-width: 490px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 42px;
+    }
     h3 {
         position: relative;
         color: $color1;
@@ -43,6 +52,12 @@
         line-height: 70px;
         // margin-bottom: 33px;
         z-index: 2;
+        @media (max-width: 490px) {
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
     }
     p {
         margin-top: 16px;
@@ -51,6 +66,12 @@
         font-style: normal;
         font-weight: 600;
         line-height: 34px;
+        @media (max-width: 490px) {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 34px;
+        }
     }
     span {
         position: relative;
@@ -64,6 +85,14 @@
         height: 29px;
         bottom: 20px;
         z-index: 2;
+        @media (max-width: 490px) {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            width: max-content;
+            margin-top: 20px;
+        }
         &::before {
             content: '';
             position: absolute;
