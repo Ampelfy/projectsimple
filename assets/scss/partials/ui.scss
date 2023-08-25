@@ -36,7 +36,7 @@
             position: absolute;
             top: 21px;
             right: 16px;
-            background-image: url(../images/icons/btn-small-arrow-blue.png);
+            background-image: url(../images/icons/btn-small-arrow-blue.svg);
             background-position: top;
             background-repeat: no-repeat;
             width: 22px;
@@ -46,14 +46,14 @@
             background: linear-gradient(90deg, #3126CA 0%, #705AD8 100%);
             color: $color1;
             &::after {
-                background-image: url(../images/icons/btn-small-arrow-white.png);
+                background-image: url(../images/icons/btn-small-arrow-white.svg);
             }
         }
         &:active {
             background: linear-gradient(90deg, #1E13B1 0%, #5F46D2 100%);
             color: $color1;
             &::after {
-                background-image: url(../images/icons/btn-small-arrow-white.png);
+                background-image: url(../images/icons/btn-small-arrow-white.svg);
             }
         }
     }
@@ -89,7 +89,7 @@
             position: absolute;
             top: 21px;
             right: 30px;
-            background-image: url(../images/icons/btn-medium-arrow-white.png);
+            background-image: url(../images/icons/btn-medium-arrow-white.svg);
             background-position: top;
             background-repeat: no-repeat;
             width: 22px;
@@ -99,14 +99,14 @@
             background: $color1;
             color: $color12;
             &::after {
-                background-image: url(../images/icons/btn-medium-arrow-blue-hover.png);
+                background-image: url(../images/icons/btn-medium-arrow-blue-hover.svg);
             }
         }
         &:active {
             background: $color1;
             color: $color12;
             &::after {
-                background-image: url(../images/icons/btn-medium-arrow-blue-active.png);
+                background-image: url(../images/icons/btn-medium-arrow-blue-active.svg);
             }
         }
     }
@@ -131,7 +131,7 @@
             position: absolute;
             top: 21px;
             right: 30px;
-            background-image: url(../images/icons/btn-xl-arrow-white.png);
+            background-image: url(../images/icons/btn-xl-arrow-white.svg);
             background-position: top;
             background-repeat: no-repeat;
             width: 22px;
@@ -157,7 +157,7 @@
             position: absolute;
             top: 21px;
             right: 30px;
-            background-image: url(../images/icons/btn-xl-arrow-blue.png);
+            background-image: url(../images/icons/btn-xl-arrow-blue.svg);
             background-position: top;
             background-repeat: no-repeat;
             width: 22px;
@@ -168,7 +168,7 @@
             background: linear-gradient(90deg, #E583FF 0%, #DE61FF 100%);
             box-shadow: 0px 30px 40px -15px #5947B2;
             &::after {
-                background-image: url(../images/icons/btn-xl-arrow-white-hover.png);
+                background-image: url(../images/icons/btn-xl-arrow-white-hover.svg);
             }
         }
         &:active {
@@ -176,7 +176,7 @@
             background: var(--grad-5, linear-gradient(90deg, #E583FF 0%, #C93AEF 100%));
             box-shadow: 0px 30px 40px -15px #5947B2;
             &::after {
-                background-image: url(../images/icons/btn-xl-arrow-white-hover.png);
+                background-image: url(../images/icons/btn-xl-arrow-white-hover.svg  );
             }
         }
     }
