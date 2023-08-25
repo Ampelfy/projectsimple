@@ -14,6 +14,9 @@
         display: flex;
         justify-content: center;
         justify-content: space-between;
+        @media (max-width: 1366px) {
+            flex-direction: column;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -95,7 +98,7 @@
         .right {
             margin-left: 60px;
             img {
-                width: 90px;
+                max-width: 90px;
                 height: 90px;
                 border-radius: 20px;
             }

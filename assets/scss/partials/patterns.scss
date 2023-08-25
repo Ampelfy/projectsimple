@@ -31,6 +31,9 @@
     .dflex {
         padding: 120px 0;
         justify-content: space-between;
+        @media (max-width: 1366px) {
+            flex-direction: column;
+        }
     }
 }
 .container {

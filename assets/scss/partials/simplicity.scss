@@ -14,7 +14,11 @@
         display: flex;
         align-items: center;
         margin-top: 80px;
-    }
+        @media (max-width: 1366px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+     }
     // .simplicity__item
     &__item {
         width: 280px;
@@ -27,6 +31,14 @@
         justify-content: center;
         background-color: $color1;
         border-radius: 10px;
+        @media (max-width: 1366px) {
+            flex: 0 0 33.999%;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
         img {
             margin-bottom: 18px;
         }

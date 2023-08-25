@@ -792,6 +792,36 @@ animate({
 })();
 
 //=================
+//Scroll to top
+var btn = $('#scrollToTop');
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+//=================
+//LoadMore
+$(function () {
+  $(".loadmore__item").slice(0, 3).show();
+  $("body").on('click touchstart', '.load-more', function (e) {
+    e.preventDefault();
+    $(".loadmore__item:hidden").slice(0, 3).slideDown();
+    if ($(".loadmore__item:hidden").length == 0) {
+      $(".load-more").css('visibility', 'hidden');
+    }
+    $('html,body').animate({
+      scrollTop: $(this).offset().top
+    }, 1000);
+  });
+});
+
+//=================
 //Swiper
 const swiper = new Swiper('.swiper', {
 	// Optional parameters

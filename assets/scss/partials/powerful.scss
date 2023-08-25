@@ -32,6 +32,9 @@
     }
     }
     ._tabs {
+        @media (max-width: 1366px) {
+            overflow-x: scroll;
+        }
     }
     ._tabs-item {
         padding: 20px 30px;
