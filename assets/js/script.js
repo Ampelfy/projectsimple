@@ -70,8 +70,8 @@ $(function () {
     $('.burger-nav').click(function (event) {
         $('.menu__list').toggleClass('active')
     }),
-    $('.submenu__link, .menu__link').click(function (event) {
-        $('.menu').removeClass('active')
+    $('.burger-nav').click(function (event) {
+        $('.menu-mobile').removeClass('active')
     });
 })
 

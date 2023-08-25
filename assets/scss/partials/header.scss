@@ -2,7 +2,6 @@
 // Header styles
 //====================================================================================================
 .header {
-    position: relative;
     width: 100%;
     height: 81px;
     padding: 14px 0;
@@ -106,20 +105,20 @@
     }
     .menu__list {
         position: absolute;
-        top: 41px;
-        right: -900px;
+        top: 39px;
+        right: -33px;
         background-color: #fff;
         width: 100vw;
         height: 200vw;
         z-index: 99999;
         transition: all 500ms ease-in-out;
+        display: none;
         .list-top {
             padding-top: 230px;
         }
         .list-bottom {
         }
         &.active {
-            right: -33px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
