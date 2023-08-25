@@ -1,8 +1,15 @@
 .powerful {
-    position: relative;
-    margin: 160px 0;
+    @include block;
     .titleblock {
         text-align: center;
+        &__title {
+            @media (max-width: 490px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 
     .containertabs {
@@ -19,6 +26,9 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
+            @media (max-width: 490px) {
+                width: max-content;
+            }
         }
         
     // .tabs-block__body
@@ -32,9 +42,9 @@
     }
     }
     ._tabs {
-        @media (max-width: 1366px) {
-            overflow-x: scroll;
-        }
+        // @media (max-width: 1366px) {
+        //     overflow-x: scroll;
+        // }
     }
     ._tabs-item {
         padding: 20px 30px;
@@ -48,6 +58,7 @@
         font-weight: 400;
         line-height: 24px;
         margin-right: 20px;
+        
         cursor: pointer;
         &:last-child {
             margin-right: 0px;

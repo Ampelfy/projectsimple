@@ -838,11 +838,34 @@ $(function () {
 const swiper = new Swiper('.swiper', {
 	// Optional parameters
 	loop: true,
-	// Navigation arrows
+	scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev',
 	},
+	breakpoints: {
+        320: {
+		// scrollbar: {
+		// 	el: ".swiper-scrollbar",
+		// 	hide: true,
+		// 	scrollbarDraggable: true,
+		// 	scrollbarHide: true,
+		// 	grabCursor: true,
+		// },
+		// navigation: false,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
+      },
   });
 
 

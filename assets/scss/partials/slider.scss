@@ -3,15 +3,25 @@
     width: 1264px;
     height: 440px;
     text-align: center;
+    @media (max-width: 490px) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .swiper-slide {
     img {
         width: auto;
         height: 340px;
+        @media (max-width: 490px) {
+            height: 90px;
+        }
     }
     p {
         margin-top: 20px;
+        @media (max-width: 490px) {
+            margin-bottom: 60px;
+        }
     }
 }
 
