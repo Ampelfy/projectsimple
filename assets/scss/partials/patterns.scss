@@ -3,7 +3,8 @@
 //====================================================================================================
 
 .patterns {
-    @include block;
+    position: relative;
+    padding: 160px 0;
     background-color: $color1;
     &:before {
         content: "";
