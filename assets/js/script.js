@@ -63,6 +63,18 @@ if (location.hash) {
 		_goto(document.querySelector('.' + hsh), 500, '');
 	}
 }
+
+//=================
+//Menu
+$(function () {
+    $('.burger-nav').click(function (event) {
+        $('.menu__list').toggleClass('active')
+    }),
+    $('.submenu__link, .menu__link').click(function (event) {
+        $('.menu').removeClass('active')
+    });
+})
+
 //=================
 //Menu
 let iconMenu = document.querySelector(".icon-menu");
