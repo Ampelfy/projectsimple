@@ -26,7 +26,7 @@
 }
 .menu {
     margin-left: 100px;
-    @media (max-width: 375px) {
+    @media (max-width: 490px) {
 		display: none;
 	}
 		// .menu__list
@@ -52,7 +52,7 @@
 }
 .auth {
     margin-left: auto;
-    @media (max-width: 375px) {
+    @media (max-width: 490px) {
 		display: none;
 	}
 		// .auth__list
@@ -74,7 +74,7 @@
     position: relative;
     display: none;
     margin-left: auto;
-    @media (max-width: 375px) {
+    @media (max-width: 490px) {
 		display: block;
 	}
     .burger-nav {
