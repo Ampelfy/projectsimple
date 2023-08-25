@@ -4,6 +4,12 @@
         text-align: center;
         // .titleblock__title
         &__title {
+            @media (max-width: 490px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
         // .titleblock__description
         &__description {
@@ -38,6 +44,10 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+        @media (max-width: 490px) {
+            flex: 0 0 100%;
+            margin-right: 0px;
         }
         img {
             margin-bottom: 18px;

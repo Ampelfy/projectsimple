@@ -134,3 +134,23 @@
 		&_white {
 		}
 }
+
+.btngroup {
+    @media (max-width: 490px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+	}
+    a {
+        &:first-child {
+            @media (max-width: 490px) {
+                margin-bottom: 24px;
+            }
+        }
+        @media (max-width: 490px) {
+            margin-right: 20px;
+            margin-bottom: 24px;
+        }
+    }
+}
