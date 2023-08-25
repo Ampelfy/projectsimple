@@ -11,6 +11,11 @@
         &__title {
         text-align: left;
         max-width: 530px;
+        @media (max-width: 390px) {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
         }
         &__description {
             margin-top: 16px;
@@ -30,6 +35,9 @@
     flex: 0 0 47%;
     @media (max-width: 1366px) {
         flex: 0 0 56%;
+    }
+    @media (max-width: 390px) {
+        margin-top: 50px;
     }
 		// .menusolution__list
 		&__list {
