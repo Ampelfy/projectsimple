@@ -4,7 +4,7 @@
     height: 440px;
     text-align: center;
     @media (max-width: 490px) {
-        width: 100%;
+        width: 270px;
         height: auto;
     }
 }
@@ -31,6 +31,16 @@
     padding: 10px;
     border-radius: 10px;
     background: $color1;
+    @media (max-width: 490px) {
+        display: none;
+    }
+}
+
+.swiper-scrollbar {
+    display: none;
+    @media (max-width: 490px) {
+        display: block;
+    }
 }
 
 .swiper-button-prev:after {
