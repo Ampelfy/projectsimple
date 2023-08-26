@@ -4,7 +4,7 @@
         text-align: center;
         // .titleblock__title
         &__title {
-            @media (max-width: 490px) {
+            @media (max-width: 768px) {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -45,7 +45,7 @@
                 margin-bottom: 0;
             }
         }
-        @media (max-width: 490px) {
+        @media (max-width: 768px) {
             flex: 0 0 100%;
             margin-right: 0px;
         }

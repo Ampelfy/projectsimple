@@ -281,7 +281,7 @@
 	z-index: 1000;
     transition: $transition200;
     cursor: pointer;
-    @media (max-width: 490px) {
+    @media (max-width: 768px) {
         display: none;
     }
     &::after {

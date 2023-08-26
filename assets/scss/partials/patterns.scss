@@ -30,7 +30,7 @@
 		// .titleblock__title
 
 		&__title {
-            @media (max-width: 320px) {
+            @media (max-width: 768px) {
                 text-align: left;
             }
 		}
@@ -38,7 +38,7 @@
 		// .titleblock__description
 
 		&__description {
-            @media (max-width: 320px) {
+            @media (max-width: 768px) {
                 text-align: left;
             }
 		}
@@ -63,7 +63,7 @@
     @media (max-width: 1366px) {
         flex: 0 0 60%;
     }
-    @media (max-width: 490px) {
+    @media (max-width: 768px) {
         margin-bottom: 38px;
     }
     // .todolist__item
@@ -101,8 +101,10 @@
             font-weight: 600;
             line-height: 34px;
             margin-right: 26px;
-            @media (max-width: 490px) {
-                flex: 0 0 14.4%
+        }
+        p {
+            @media (max-width: 768px) {
+                flex: 0 0 80%;
             }
         }
     }
