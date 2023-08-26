@@ -24,12 +24,11 @@
 	}
     // .firstview__top
     &__top {
-        position: relative;
         text-align: center;
         .toptitle {
             display: flex;
             justify-content: center;
-            @media (max-width: 490px) {
+            @media (max-width: 768px) {
                 flex-direction: column;
             }
         }
@@ -39,7 +38,7 @@
             background-color: $color1;
             padding: 8px 16px;
             margin-left: 10px;
-            @media (max-width: 490px) {
+            @media (max-width: 768px) {
                 flex-direction: column;    width: 138px;
                 margin: 0 auto 32px auto;            
             }
@@ -53,6 +52,9 @@
                 background: linear-gradient(117deg, #3291FD 0%, #8666FD 100%);
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
+                @media (max-width: 490px) {
+                    letter-spacing: 0.35px;        
+                }
                 &::before {
                     content: '';
                     position: absolute;
@@ -76,6 +78,12 @@
             font-weight: 800;
             line-height: 76px;
             margin-bottom: 35px;
+            @media (max-width: 768px) {
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 76px;
+            }
             @media (max-width: 490px) {
                 font-size: 40px;
                 font-weight: 800;
@@ -91,6 +99,12 @@
             font-weight: 400;
             line-height: 28px;
             margin-bottom: 35px;
+            @media (max-width: 768px) {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+            }
             @media (max-width: 490px) {
                 font-size: 16px;
                 font-style: normal;
@@ -101,6 +115,12 @@
             span {
                 font-weight: 600;
                 line-height: 34px;
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 34px;
+                }
                 @media (max-width: 490px) {
                     font-size: 16px;
                     font-style: normal;
