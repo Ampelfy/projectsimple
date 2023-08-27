@@ -3,13 +3,13 @@
 //====================================================================================================
 .patterns {
     position: relative;
-    padding: 120px 0;
+    padding: 120px 0 0 0;
     background-color: $color1;
     @media (max-width: 1365px) {
-		padding: 80px 0;
+		padding: 80px 0 0 0;
 	}
     @media (max-width: 767px) {
-		padding: 40px 0;
+		padding: 40px 0 0 0;
 	}
     &:before {
         content: "";
@@ -39,17 +39,18 @@
     .dflex {
         padding: 120px 0;
         justify-content: space-between;
-        @media (max-width: 1366px) {
+        @media (max-width: 1365px) {
             flex-direction: column;
+            padding: 60px 0 0 0;
         }
         @media (max-width: 767px) {
-            padding: 80px 0;
+            padding: 80px 0 0 0;
         }
     }
 }
 .todolist {
     flex: 0 0 51%;
-    @media (max-width: 1366px) {
+    @media (max-width: 1365px) {
         flex: 0 0 60%;
     }
     @media (max-width: 768px) {
@@ -102,7 +103,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    @media (max-width: 1366px) {
+    @media (max-width: 1365px) {
         flex: 0 0 40%;
         justify-content: center;
     }
@@ -110,7 +111,7 @@
         width: 100%;
         height: auto;
         @media (max-width: 1365px) {
-            height: 480px;
+            max-height: 480px;
         }
     }
 }

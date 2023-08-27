@@ -23,7 +23,7 @@
         display: flex;
         align-items: center;
         margin-top: 80px;
-        @media (max-width: 1366px) {
+        @media (max-width: 1365px) {
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -40,8 +40,8 @@
         justify-content: center;
         background-color: $color1;
         border-radius: 10px;
-        @media (max-width: 1366px) {
-            flex: 0 0 33.999%;
+        @media (max-width: 1365px) {
+            flex: 0 0 46%;
             margin-right: 16px;
             margin-bottom: 16px;
             &:last-child {

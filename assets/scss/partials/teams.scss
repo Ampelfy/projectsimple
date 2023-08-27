@@ -19,7 +19,7 @@
 		&__list {
             display: flex;
             justify-content: space-between;
-            margin: 0 20px;
+            margin: 0 0 0 20px;
             @media (max-width: 1365px) {
                 flex-direction: column;
             }
@@ -39,6 +39,9 @@
                 font-weight: 400;
                 line-height: 27px;
                 margin-bottom: 32px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
             &:last-child {
                 margin-right: 0;

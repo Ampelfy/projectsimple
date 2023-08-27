@@ -196,6 +196,7 @@
             line-height: normal;
         }
         span {
+            width: max-content;
             color: $color1;
             padding: 4px 16px;
             font-size: 46px;
@@ -278,8 +279,15 @@
 .dflex {
     width: 100% !important;
     display: flex;
-    &__p {
-        margin-bottom: 33px;
+    &_p {
+        @media (max-width: 1365px) {
+            margin-bottom: 33px !important;
+        }
+    }
+    h3 {
+        @media (max-width: 767px) {
+            margin-bottom: 16px !important;
+        }
     }
 }
 .column {
