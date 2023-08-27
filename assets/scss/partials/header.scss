@@ -70,6 +70,7 @@
     position: relative;
     display: none;
     margin-left: auto;
+    transition: $transition300;
     @media (max-width: 1365px) {
 		display: block;
 	}
@@ -79,6 +80,8 @@
         height: 2px;
         background-color: #0E2333;
         border-radius: 5px;
+        transition: $transition300;
+        cursor: pointer;
         &._active {
             background: none;
             &::after {
@@ -146,7 +149,13 @@
                 margin-bottom: 40px;
             }
             .menu__link {
-
+                transition: $transition300;
+                &:hover {
+                    color: $color12;
+                }
+                &:active {
+                    color: $color12;
+                }
             }
         }
         .list-bottom {
@@ -156,7 +165,17 @@
             flex-direction: column;
             li {
                 &:last-child {
-                    a {color: #504cd1;}
+                    a {
+                        color: #504cd1;
+                        &:hover {
+                            background: linear-gradient(90deg, #3126CA 0%, #705AD8 100%);
+                            color: $color1;
+                        }
+                        &:active {
+                            background: linear-gradient(90deg, #1E13B1 0%, #5F46D2 100%);
+                            color: $color1;
+                        }
+                    }
                 }
                 
             }
@@ -165,6 +184,7 @@
                 margin-bottom: 40px;
             }
             .menu__link {
+                transition: $transition300;
             }
         }
         &._active {
