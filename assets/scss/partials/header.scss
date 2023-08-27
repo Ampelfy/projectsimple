@@ -138,6 +138,9 @@
         z-index: 99999;
         transition: all 500ms ease-in-out;
         display: none;
+        @media (max-width: 767px) {
+            right: -20px;
+        }
         .list-top {
             padding: 100px 95px;
             display: flex;
