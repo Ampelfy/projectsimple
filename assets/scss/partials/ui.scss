@@ -269,7 +269,8 @@
         }
 	}
 	&:active {
-		background-color: #555;
+        color: #333;
+        background-color: $color1;
 	}
 	&.show {
 		opacity: 1;
