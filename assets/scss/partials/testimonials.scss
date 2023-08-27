@@ -1,3 +1,6 @@
+//====================================================================================================
+// Testimonials styles
+//====================================================================================================
 .testimonials {
     @include block;
     &:before {
@@ -35,30 +38,13 @@
             flex: 0 0 46%;
         }
     }
-    
-    .titleblock {
-
-        // .titleblock__title
-    
-        &__title {
-            text-align: left;
-        }
-    
-        // .titleblock__description
-    
-        &__description {
-        }
-    }
     // .testimonials__menu
-
     &__menu {
         @media (max-width: 1365px) {
             margin-top: 60px;
         }
     }
-
     // .testimonials__item
-
     &__item {
         display: flex;
         margin-bottom: 60px;
@@ -105,8 +91,6 @@
         
     }
 }
-
-
 .quote {
     width: 32px;
     height: 32px;

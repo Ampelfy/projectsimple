@@ -10,15 +10,12 @@
         justify-content: center;
     }
     // .footer__menu
-
     &__menu {
         display: flex;
         align-items: center;
         margin-bottom: 32px;
     }
-
     // .footer__item
-
     &__item {
         width: 40px;
         height: 40px;
@@ -28,7 +25,6 @@
         }
     }
 }
-
 .policy {
     color: $color8;
     text-align: center;
@@ -55,7 +51,6 @@
     line-height: 24px;
     margin-left: 24px;
 }
-
 .footer__bottom {
     display: flex;
     align-items: center;

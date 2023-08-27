@@ -1,3 +1,6 @@
+//====================================================================================================
+// Swiper Slider styles
+//====================================================================================================
 .swiper {
     position: relative;
     width: 1264px;
@@ -8,7 +11,6 @@
         height: 100%;
     }
 }
-
 .swiper-slide {
     user-select: none !important;
     height: auto;
@@ -28,7 +30,6 @@
         }
     }
 }
-
 .swiper-button-next, .swiper-button-prev {
     width: 44px !important;
     height: 44px !important;
@@ -39,14 +40,12 @@
         display: none;
     }
 }
-
 .swiper-scrollbar {
     display: none;
     @media (max-width: 1365px) {
         display: block;
     }
 }
-
 .swiper-button-prev:after {
     content: '' !important;
     background-image: url(../images/icons/arrow-left.png);
@@ -55,7 +54,6 @@
     width: 17.7px;
     height: 13.5px;
 }
-
 .swiper-button-next:after {
     content: '' !important;
     background-image: url(../images/icons/arrow-right.png);
@@ -68,29 +66,22 @@
         background-image: url(../images/icons/2.png);
     }
 }
-
 .swiper-button-prev:hover:after {
     background-image: url(../images/icons/arrow-left-hover.png);
 }
-
 .swiper-button-next:hover:after {
     background-image: url(../images/icons/arrow-right-hover.png);
 }
-
 .swiper-button-next, .swiper-button-prev {
     top: var(--swiper-navigation-top-offset,30%) !important;
 }
-
-
 .swiper-scrollbar {
     background-color: #D9D9D9 !important;
 }
-
 .swiper-scrollbar-drag {
     border-radius: 10px;
     background: linear-gradient(90deg, #7251EF 0%, #2C84E9 100%) !important;
 }
-
 .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
     height: 8px !important;
 }

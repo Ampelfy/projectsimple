@@ -1,7 +1,6 @@
 //====================================================================================================
-// Tools styles
+// Patterns styles
 //====================================================================================================
-
 .patterns {
     position: relative;
     padding: 120px 0;
@@ -25,15 +24,12 @@
     .titleblock {
         text-align: center;
 		// .titleblock__title
-
 		&__title {
             @media (max-width: 767px) {
                 text-align: left;
             }
 		}
-
 		// .titleblock__description
-
 		&__description {
             @media (max-width: 767px) {
                 text-align: left;
@@ -51,10 +47,6 @@
         }
     }
 }
-.container {
-}
-
-
 .todolist {
     flex: 0 0 51%;
     @media (max-width: 1366px) {
@@ -64,7 +56,6 @@
         margin-bottom: 38px;
     }
     // .todolist__item
-
     &__item {
         display: flex;
         align-items: center;

@@ -30,7 +30,6 @@
         }
     }
 }
-
 .ctatitle {
     position: relative;
     display: flex;
@@ -56,7 +55,6 @@
         font-style: normal;
         font-weight: 700;
         line-height: 70px;
-        // margin-bottom: 33px;
         z-index: 2;
         @media (max-width: 1365px) {
             font-size: 40px;
@@ -125,8 +123,6 @@
         }
     }
 }
-
-
 .cta-vector {
     position: relative;
     &::before {
@@ -141,35 +137,6 @@
         background-size: cover;
     }
 }
-
-
-.cta {
-}
-.container {
-}
-.ctatitle {
-}
-// .buttons {
-//     display: flex;
-//     justify-content: center;
-//     margin: 33px 0 63px 0;
-//     .btn {
-//         margin-right: 24px;
-//         &:last-child {
-//             margin-right: 0;
-//         }
-//     }
-// }
-.btn {
-}
-.btntrial {
-
-		// .btntrial_white
-
-		&_white {
-		}
-}
-
 .btngroup {
     @media (max-width: 767px) {
         display: flex;

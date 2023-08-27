@@ -1,7 +1,6 @@
 //====================================================================================================
 // Tools styles
 //====================================================================================================
-
 .tools {
     @include block;
     padding-bottom: 160px;
@@ -20,7 +19,6 @@
             flex-direction: column-reverse;
         }
     }
-
     .titleblock {
         @media (max-width: 1365px) {
             margin-bottom: 160px;
@@ -33,7 +31,6 @@
         &__description {
         }
     }
-    
     .tabs-block {
         // .tabs-block__nav
         &__nav {
@@ -64,8 +61,7 @@
                 line-height: 27px;
             }
         }
-    }
-    
+    }  
     ._tabs-item {
         display: flex;
         align-items: center;

@@ -1,25 +1,6 @@
 //====================================================================================================
 // UI styles
 //====================================================================================================
-.dflex {
-    width: 100% !important;
-    display: flex;
-    &__p {
-        margin-bottom: 33px;
-    }
-}
-
-.column {
-    flex-direction: column;
-}
-
-.dblock {
-    display: block;
-}
-
-.m-auto {
-    margin:  0 auto;
-}
 
 //Buttonn 
 .btnsmall {
@@ -72,7 +53,6 @@
         }
     }
 }
-
 .btnmedium {
     position: relative;
     padding: 20px 68px 20px 30px;
@@ -115,7 +95,6 @@
         }
     }
 }
-
 .btnxl {
     position: relative;
     padding: 20px 68px 20px 30px;
@@ -185,7 +164,6 @@
         }
     }
 }
-
 .btngroup {
     margin: 0 0 63px 0;
     a {
@@ -195,7 +173,6 @@
         }
     }
 }
-
 // Title Block
 .titleblock {
     // .titleblock__title
@@ -252,7 +229,6 @@
         }        
     }
 }
-
 //<ScrollTo>====================================================================================================
 #scrollToTop {
     position: relative;
@@ -298,4 +274,22 @@
 		opacity: 1;
 		visibility: visible;
 	}
+}
+.dflex {
+    width: 100% !important;
+    display: flex;
+    &__p {
+        margin-bottom: 33px;
+    }
+}
+.column {
+    flex-direction: column;
+}
+
+.dblock {
+    display: block;
+}
+
+.m-auto {
+    margin:  0 auto;
 }

@@ -1,3 +1,6 @@
+//====================================================================================================
+// Powerful styles
+//====================================================================================================
 .powerful {
     @include block;
     .titleblock {
@@ -11,14 +14,12 @@
             }
         }
     }
-
     .containertabs {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-
     .tabs-block {
         margin-top: 80px;
         &__nav {
@@ -35,21 +36,6 @@
                 justify-content: flex-start;
             }
         }
-        
-    // .tabs-block__body
-
-    &__body {
-    }
-
-    // .tabs-block__block
-
-    &__block {
-    }
-    }
-    ._tabs {
-        // @media (max-width: 1366px) {
-        //     overflow-x: scroll;
-        // }
     }
     ._tabs-item {
         padding: 20px 30px;
@@ -67,7 +53,6 @@
             text-wrap: nowrap;
             width: max-content;
         }
-        
         cursor: pointer;
         &:last-child {
             margin-right: 0px;
@@ -85,7 +70,6 @@
         }
     }
 }
-
 .container-inner {
     display: flex;
     justify-content: center;

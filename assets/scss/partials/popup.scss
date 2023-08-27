@@ -1,7 +1,6 @@
 //====================================================================================================
 // Popup styles
 //====================================================================================================
-//====================================================================================================
 .popup {
 	-webkit-overflow-scrolling: touch;
 	z-index: 100;
@@ -23,7 +22,6 @@
 		height: 2168px;
 		z-index: 1;
 	}
-
 	&::before {
 		content: "";
 		background-color: $color2;
@@ -35,34 +33,27 @@
 		opacity: 0;
 		transition: opacity 0.8s ease 0s;
 	}
-
 	&.show {
 		visibility: visible;
 		overflow: auto;
-
 		&::before {
 			opacity: 1;
 		}
-
 		.popup__body {
 			transform: scale(1);
 		}
 	}
-
 	&._active {
 		overflow: auto;
 		visibility: visible;
-
 		&::before {
 			opacity: 1;
 		}
-
 		.popup__body {
 			transition: all 0.3s ease 0.2s;
 			transform: scale(1);
 		}
 	}
-
 	// .popup__content
 	&__content {
 		display: flex;
@@ -75,7 +66,6 @@
 		justify-content: center;
 		align-items: center;
 	}
-
 	// .popup__body
 	&__body {
 		width: 100%;
@@ -92,7 +82,6 @@
 			padding: 24px 16px;
         }
 	}
-
 	// .popup__close
 	&__close {
 		width: 15px;
@@ -105,7 +94,6 @@
 		background: url("../images/icons/close.svg") 0 0 no-repeat;
 	}
 }
-
 .form-title {
     color: #5F68FF;
     text-align: center;
@@ -115,7 +103,6 @@
     line-height: normal;
     line-height: normal;
 }
-
 input::-webkit-input-placeholder,
 input:focus::-webkit-input-placeholder {
     color: #AEB9C6;
@@ -124,7 +111,6 @@ input:focus::-webkit-input-placeholder {
     font-weight: 400;
     line-height: 27px;
 }
-
 .popup__body {
     form {
         margin-top: 32px;
