@@ -38,7 +38,7 @@
             background: linear-gradient(90deg, #1E13B1 0%, #5F46D2 100%);
             color: $color1;
             &::after {
-                background-image: url(../images/icons/bbtn-small-arrow-white-hover.svg);
+                background-image: url(../images/icons/btn-small-arrow-white-hover.svg);
             }
         }
     }
@@ -281,9 +281,7 @@
     width: 100% !important;
     display: flex;
     &_p {
-        @media (max-width: 1365px) {
-            margin-bottom: 33px !important;
-        }
+        margin-bottom: 33px !important;
     }
     h3 {
         @media (max-width: 767px) {
