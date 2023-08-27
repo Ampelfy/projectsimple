@@ -26,7 +26,10 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
-            @media (max-width: 1365px) {
+            @media (min-width: 1136px) and (max-width: 1365px) {
+                justify-content: center;
+            }
+            @media (max-width: 1135px) {
                 overflow-x: scroll;
                 padding-bottom: 24px;
                 justify-content: flex-start;

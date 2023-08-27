@@ -298,15 +298,17 @@ const swiper = new Swiper('.swiper', {
 	},
 	breakpoints: {
 	320: {
+		slidesPerView: 1,
 		scrollbar: {
 			el: ".swiper-scrollbar",
 			hide: false,
 		},
 	},
-	768: {
-		slidesPerView: 1,
+	1365: {
+		scrollbar: {
+			el: ".swiper-scrollbar",
+			hide: false,
 		},
-	1024: {
 		slidesPerView: 1,
 		},
 	},
