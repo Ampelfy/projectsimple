@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./assets/css/styles.css" type="text/css" />
+
+	<title>Simple Project</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- ================================================================= POPUPS-->
+		<div class="popup popup_demo">
+			<div class="popup__content">
+				<div class="popup__body">
+					<span class="form-title">Schedule a Demo</span>
+					<form class="row g-3 needs-validation was-validated" novalidate="">
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="validationCustom01"
+								placeholder="First and Last name" required="">
+						</div>
+						<div class="col-md-6">
+							<input type="number" class="form-control" id="validationCustom02" placeholder="Phone number"
+								required="">
+						</div>
+						<div class="col-md-12">
+							<input type="email" class="form-control" id="validationCustom03" placeholder="Email"
+								required="">
+						</div>
+						<div class="col-md-12">
+							<textarea class="form-control is-invalid" id="validationTextarea" placeholder="Message"
+								required></textarea>
+						</div>
+						<div class="col-12">
+							<button class="btnxl btnxl_blue" type="submit">Submit</button>
+						</div>
+					</form>
+					<div class="popup__close"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup popup_contacts">
+			<div class="popup__content">
+				<div class="popup__body">
+					<span class="form-title">Contact Us</span>
+					<form class="row g-3 needs-validation was-validated" novalidate="">
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="validationCustom01"
+								placeholder="First and Last name" required="">
+						</div>
+						<div class="col-md-6">
+							<input type="number" class="form-control" id="validationCustom02" placeholder="Phone number"
+								required="">
+						</div>
+						<div class="col-md-12">
+							<input type="email" class="form-control" id="validationCustom03" placeholder="Email"
+								required="">
+						</div>
+						<div class="col-md-12">
+							<textarea class="form-control is-invalid" id="validationTextarea" placeholder="Message"
+								required></textarea>
+						</div>
+						<div class="col-12">
+							<button class="btnxl btnxl_blue" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+				<div class="popup__close"></div>
+			</div>
+		</div>
+	</div>
+	<!-- ================================================================= POPUPS-->
+	<header class="header">
+		<div class="container container_flex">
+			<div class="logo">
+				<a href="#"><img src="./assets/images/logo.png" alt="logo"></a>
+			</div>
+			<div class="menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="#" class="menu__link">Contact us</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">Our blog</a>
+					</li>
+				</ul>
+			</div>
+			<div class="menu-mobile">
+				<div class="burger-nav"><span></span></div>
+				<ul class="menu__list">
+					<div class="list-top">
+						<li class="menu__item">
+							<a href="#" class="menu__link">Contact us</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Our blog</a>
+						</li>
+					</div>
+					<div class="list-bottom">
+						<li class="menu__item">
+							<a href="#" class="menu__link">Contact us</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Our blog</a>
+						</li>
+					</div>
+				</ul>
+			</div>
+			<div class="auth">
+				<ul class="auth__list">
+					<li class="auth__item">
+						<a href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
+							class="btnsmall btnsmall_nobg">Login</a>
+					</li>
+					<li class="auth__item auth__item-signup">
+						<a href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
+							class="btnsmall btnsmall_white">Sign Up</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main class="page">
+		<div class="firstview">
+			<div class="container">
+				<div class="firstview__top">
+					<div class="toptitle">
+						<h1 class="top__title">We made it easy to do Agile right!</h1>
+						<span class="powered">
+							<p>Powered by AI</p>
+						</span>
+					</div>
+					<p class="top__description">First ever AI Agile Software Management Platform to <span>make Teams
+							better. </span></p>
+					<div class="buttons"><a
+							href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
+							class="btnxl btnxl_blue m-auto">Start trial now</a></div>
+				</div>
+				<div class="firstview__bottom">
+					<img src="./assets/images/planform.png" alt="agile-right">
+				</div>
+			</div>
+		</div>
+		<div class="teams">
+			<div class="container">
+				<div class="titleblock">
+					<h2 class="titleblock__title">We help Teams establish and maintain proper Agile Discipline</h2>
+				</div>
+			</div>
+			<div class="menuteam">
+				<div class="container">
+					<ul class="menuteam__list">
+						<li class="menuteam__item"><span class=""></span>Designed for Multi-Team environments</li>
+						<li class="menuteam__item">Supports Scrum and Scrumban methologies</li>
+						<li class="menuteam__item">Built with integrated principles of Lean, XP, and Flow</li>
+						<li class="menuteam__item">Provides transparent visibility for entire organization</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="solution">
+			<div class="container">
+				<div class="titleblock">
+					<h2 class="titleblock__title">The <span>Right Solution</span> for the Right Job!</h2>
+					<p class="titleblock__description">We solved the pesky challenges created by tools like JIRA</p>
+				</div>
+				<div class="menusolution">
+					<div class="container">
+						<ul class="menusolution__list">
+							<li class="menusolution__item">Designed for Multi-Team environments</li>
+							<li class="menusolution__item">Supports Scrum and Scrumban methologies</li>
+							<li class="menusolution__item">Built with integrated principles of Lean, XP, and Flow
+							</li>
+							<li class="menusolution__item">Provides transparent visibility for entire organization
+							</li>
+							<li class="menusolution__item">Work structured in Value Based Streams</li>
+							<li class="menusolution__item">Optimized for collaborative development and teamwork</li>
+							<li class="menusolution__item">Eliminates micromanagement and guesswork where things are
+							</li>
+							<li class="menusolution__item">And lastly, it works very very fast!</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cta">
+			<div class="container">
+				<div class="ctatitle">
+					<h3>Large Title for Your Attention</h3>
+					<span>Join Today</span>
+				</div>
+				<div class="buttons">
+					<a href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
+						class="btnxl btnxl_white m-auto">Start trial now</a>
+				</div>
+			</div>
+		</div>
+		<div class="tools">
+			<div class="container">
+				<div class="titleblock">
+					<h2 class="titleblock__title">One Platform, All Tools, <span>Out of the Box</span></h2>
+					<p class="titleblock__description">We apply the power of AI to drive continuous improvement</p>
+				</div>
+				<div class="tabs-block _tabs">
+					<nav class="tabs-block__nav">
+						<div class="tabs-block__item _tabs-item _active"><img
+								src="./assets/images/icons/list_numbered.png" alt="list_numbered">Leadership
+							dashboards</div>
+						<div class="tabs-block__item _tabs-item"><img src="./assets/images/icons/flag.png"
+								alt="flag">Roadmaps and Goals</div>
+						<div class="tabs-block__item _tabs-item"><img src="./assets/images/icons/smile.png"
+								alt="smile">Team Health Check</div>
+						<div class="tabs-block__item _tabs-item"><img src="./assets/images/icons/story_poker.png"
+								alt="story_poker">Story Poker</div>
+						<div class="tabs-block__item _tabs-item"><img src="./assets/images/icons/sprint.png"
+								alt="sprint">Sprint Reviews</div>
+						<div class="tabs-block__item _tabs-item"><img src="./assets/images/icons/edit.png" alt="edit">5
+							Why's Post Mortems</div>
+						<div class="tabs-block__item _tabs-item"><img src="./assets/images/icons/list.png"
+								alt="list">ToDo's</div>
+					</nav>
+					<div class="tabs-block__body">
+						<div class="tabs-block__block _tabs-block _active">
+							<img src="https://projectsimple.ai/wp-content/uploads/2022/12/3Sprint-Page-9-e1671546241266.png"
+								alt="">
+							<p>Epics help in organizing and prioritizing work by capturing significant functionality
+								or business requirements, facilitating long-term planning and incremental value
+								delivery in Agile projects.</p>
+						</div>
+						<div class="tabs-block__block _tabs-block">
+							<img src="https://projectsimple.ai/wp-content/uploads/2022/12/2Epic-List-05-Filters-e1671546134779.png"
+								alt="">
+							<p>Epics help in organizing and prioritizing work by capturing significant functionality
+								or business requirements, facilitating long-term planning and incremental value
+								delivery in Agile projects.</p>
+						</div>
+						<div class="tabs-block__block _tabs-block">
+							<img src="https://projectsimple.ai/wp-content/uploads/2022/12/Multi-Project-User-e1671545951819.png"
+								alt="">
+							<p>Epics help in organizing and prioritizing work by capturing significant functionality
+								or business requirements, facilitating long-term planning and incremental value
+								delivery in Agile projects.</p>
+						</div>
+						<div class="tabs-block__block _tabs-block">
+							<img src="https://projectsimple.ai/wp-content/uploads/2022/12/4Bug-Backlog-BUTTON-e1671546377765.png"
+								alt="">
+							<p>Epics help in organizing and prioritizing work by capturing significant functionality
+								or business requirements, facilitating long-term planning and incremental value
+								delivery in Agile projects.</p>
+						</div>
+						<div class="tabs-block__block _tabs-block">
+							<img src="https://projectsimple.ai/wp-content/uploads/2022/12/5_Sprint-Review-e1671546446630.png"
+								alt="">
+							<p>Epics help in organizing and prioritizing work by capturing significant functionality
+								or business requirements, facilitating long-term planning and incremental value
+								delivery in Agile projects.</p>
+						</div>
+						<div class="tabs-block__block _tabs-block">
+							<img src="https://projectsimple.ai/wp-content/uploads/2022/12/6_Story-Poker-e1671546506779.png"
+								alt="">
+							<p>Epics help in organizing and prioritizing work by capturing significant functionality
+								or business requirements, facilitating long-term planning and incremental value
+								delivery in Agile projects.</p>
+						</div>
+						<div class="tabs-block__block _tabs-block">
+							<img src="https://projectsimple.ai/wp-content/uploads/2022/12/7_Retrospective-1-e1671737751644.png"
+								alt="">
+							<p>Epics help in organizing and prioritizing work by capturing significant functionality
+								or business requirements, facilitating long-term planning and incremental value
+								delivery in Agile projects.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="patterns">
+			<div class="container">
+				<div class="titleblock">
+					<h2 class="titleblock__title"><span>Say goodbye</span> to Agile Anti-Patterns!</h2>
+					<p class="titleblock__description">We made it easy to do Agile right!</p>
+				</div>
+				<div class="dflex">
+					<ul class="todolist">
+						<li class="todolist__item"><span>1</span><p>Eliminates emphasis on vanity metrics like Velocity</p></li>
+						<li class="todolist__item"><span>2</span><p>Implements Flow principles with Work In Progress Optimization</p></li>
+						<li class="todolist__item"><span>3</span><p>Tracks work interruption and Utilization ratios</p></li>
+						<li class="todolist__item"><span>4</span><p>Improves story decomposition and tracking</p></li>
+						<li class="todolist__item"><span>5</span><p>Establishes clear separation of "In Sprint" bugs over other defects</p></li>
+						<li class="todolist__item"><span>6</span><p>Eliminates ambiguous and automated backlog item statuses</p></li>
+						<li class="todolist__item"><span>7</span><p>Explicitly defined process with clear Definition of Ready and Definition of Done</p></li>
+					</ul>
+					<div class="listimg">
+						<img src="./assets/images/agile-right.png" alt="agile-right">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="powerful">
+			<div class="container">
+				<div class="titleblock">
+					<h2 class="titleblock__title">Powerful <span>AI features</span></h2>
+					<p class="titleblock__description">We apply the power of AI to drive continuous improvement</p>
+				</div>
+				<div class="container-inner">
+					<div class="tabs-block _tabs">
+						<nav class="tabs-block__nav">
+							<div class="tabs-block__item _tabs-item _active">Customize Your AI</div>
+							<div class="tabs-block__item _tabs-item">AI Co-Pilot Assistant</div>
+							<div class="tabs-block__item _tabs-item">ChatBot AI Prompting</div>
+							<div class="tabs-block__item _tabs-item">Sprint Review Recommendations</div>
+						</nav>
+						<div class="tabs-block__body">
+							<div class="tabs-block__block _tabs-block _active">
+								<div class="swiper">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide">
+											<img src="./assets/images/slider/Customize-Your-AI.png" alt="">
+											<p>1. Create your own company AI to support the Teams</p>
+										</div>
+										<div class="swiper-slide">
+											<img src="./assets/images/slider/Sprint-Review-Recommendations.png" alt="">
+											<p>1-2. Create your own company AI to support the Teams</p>
+										</div>
+									</div>
+									<!-- If we need navigation buttons -->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-scrollbar"></div>
+								</div>
+							</div>
+							<div class="tabs-block__block _tabs-block ">
+								<div class="swiper">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide">
+											<img src="./assets/images/slider/AI-Co-Pilot Assistant.png" alt="">
+											<p>2. Create your own company AI to support the Teams</p>
+										</div>
+										<div class="swiper-slide">
+											<img src="./assets/images/slider/ChatBot-AI-Prompting.png" alt="">
+											<p>2-2. Create your own company AI to support the Teams</p>
+										</div>
+									</div>
+									<!-- If we need navigation buttons -->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-scrollbar"></div>
+								</div>
+							</div>
+							<div class="tabs-block__block _tabs-block ">
+								<div class="swiper">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide">
+											<img src="./assets/images/slider/ChatBot-AI-Prompting.png" alt="">
+											<p>3. Create your own company AI to support the Teams</p>
+										</div>
+										<div class="swiper-slide">
+											<img src="./assets/images/slider/AI-Co-Pilot Assistant.png" alt="">
+											<p>3-2. Create your own company AI to support the Teams</p>
+										</div>
+									</div>
+									<!-- If we need navigation buttons -->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-scrollbar"></div>
+								</div>
+							</div>
+							<div class="tabs-block__block _tabs-block ">
+								<div class="swiper">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide">
+											<img src="./assets/images/slider/Sprint-Review-Recommendations.png" alt="">
+											<p>4. Create your own company AI to support the Teams</p>
+										</div>
+										<div class="swiper-slide">
+											<img src="./assets/images/slider/Customize-Your-AI.png" alt="">
+											<p>4-2 Create your own company AI to support the Teams</p>
+										</div>
+									</div>
+									<!-- If we need navigation buttons -->
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-scrollbar"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cta">
+			<div class="container">
+				<div class="ctatitle">
+					<h3>Large Title for Your Attention</h3>
+					<span>Join Today</span>
+				</div>
+				<div class="buttons"><a
+						href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
+						class="btnxl btnxl_white m-auto">Start trial now</a></div>
+			</div>
+		</div>
+		<div class="simplicity">
+			<div class="container">
+				<div class="titleblock">
+					<h2 class="titleblock__title"><span>Simplicity</span> and Elegance!</h2>
+					<p class="titleblock__description">Software everyone on the Team loves to use</p>
+				</div>
+				<ul class="simplicity__menu">
+					<li class="simplicity__item">
+						<img src="./assets/images/icons/check-ready.png" alt="check-ready">
+						<p>Intuitive workflow and functionality</p>
+					</li>
+					<li class="simplicity__item">
+						<img src="./assets/images/icons/layers-minimalistic.png" alt="layers-minimalistic">
+						<p>Simple and elegant without feature overload and bloatware</p>
+					</li>
+					<li class="simplicity__item">
+						<img src="./assets/images/icons/heart-list.png" alt="heart-list">
+						<p>Unique emotion centric design with animations and gamification</p>
+					</li>
+					<li class="simplicity__item">
+						<img src="./assets/images/icons/notes-minimalistic.png" alt="notes-minimalistic">
+						<p>Design where simple glance provides clear understanding of where things are</p>
+					</li>
+					<li class="simplicity__item">
+						<img src="./assets/images/icons/design.png" alt="design">
+						<p>No complex charts and needless clutter</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="testimonials">
+			<div class="container">
+				<div class="leftblock">
+					<div class="titleblock">
+						<h2 class="titleblock__title">Our Customers <span>Love</span> </br> what We Do</h2>
+						<p class="titleblock__description">We solved the pesky challenges created by tools like JIRA
+						</p>
+					</div>
+					<p class="leftblock_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						Lorem Ipsum has
+						been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+						galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+				<div class="rightblock">
+					<ul class="testimonials__menu">
+						<li class="testimonials__item">
+							<div class="left">
+								<span class="quote"></span>
+								<p>The leader in this space to date has been JIRA. After 20 years, if your team is
+									still using JIRA, you should seriously reconsider and sign up for Project
+									Simple.</p>
+								<span>Mark Mitchell</span>
+								<p>VP of Engineering, MedSurvey</p>
+							</div>
+							<div class="right">
+								<img src="./assets/images/avatar.png" alt="Mark-Mitchell">
+							</div>
+						</li>
+						<li class="testimonials__item">
+							<div class="left">
+								<span class="quote"></span>
+								<p>We have many teams that work across a large set of development projects. Managing
+									everything is a constant challenge and I was very impressed seeing what Project
+									Simple can do to help make things easier and again simple. Project Simple truly
+									stands for its name, but don't take it for granted on its value. While simple,
+									it's so much more.</p>
+								<span>Michael Fridshtand</span>
+							</div>
+							<div class="right">
+								<img src="./assets/images/avatar2.png" alt="Michael Fridshtand">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="cta">
+			<div class="container">
+				<div class="ctatitle dflex column">
+					<h3>See it in Action Today!</h3>
+					<p>Unlock your potential with our demo version today - experience greatness in action!</p>
+				</div>
+				<div class="buttons btngroup">
+					<a href="#demo" class="btnxl btnxl_white _popup-link">Schedule a Demo</a>
+					<a href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
+						class="btnmedium btnmedium_nobg">sign Up</a>
+				</div>
+				<p>Do you have any questions? <a href="#contacts" class="_popup-link">Contact Us</a></p>
+			</div>
+		</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<ul class="footer__menu">
+				<li class="footer__item"><a href="#"><img src="./assets/images/facebook.png" alt="facebook"></a></li>
+				<li class="footer__item"><a href="#"><img src="./assets/images/instagram.png" alt="instagram"></a></li>
+				<li class="footer__item"><a href="#"><img src="./assets/images/linkedin.png" alt="linkedin"></a></li>
+			</ul>
+			<p class="reserved">© 2023 Project Simple. All rights reserved.</p>
+			<div class="footer__bottom">
+				<a href="#" class="policy">Privacy Policy</a>
+				<a href="#" class="terms">Terms</a>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	<!-- SCROLL TO TOP -->
+	<a id="scrollToTop"></a>
+
+	<script src="./assets/js/jquery-3.7.0.js"></script>
+	<script src="./assets/js/swiper-bundle.min.js"></script>
+	<script src="./assets/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/script.js"></script>
+</body>
+
+</html>
