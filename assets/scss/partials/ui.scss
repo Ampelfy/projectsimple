@@ -2,7 +2,11 @@
 // UI styles
 //====================================================================================================
 .dflex {
+    width: 100% !important;
     display: flex;
+    p {
+        margin-bottom: 33px;
+    }
 }
 
 .column {
@@ -46,14 +50,14 @@
             background: linear-gradient(90deg, #3126CA 0%, #705AD8 100%);
             color: $color1;
             &::after {
-                background-image: url(../images/icons/btn-small-arrow-white.svg);
+                background-image: url(../images/icons/btn-small-arrow-white-hover.svg);
             }
         }
         &:active {
             background: linear-gradient(90deg, #1E13B1 0%, #5F46D2 100%);
             color: $color1;
             &::after {
-                background-image: url(../images/icons/btn-small-arrow-white.svg);
+                background-image: url(../images/icons/bbtn-small-arrow-white-hover.svg);
             }
         }
     }
@@ -202,13 +206,13 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        @media (max-width: 768px) {
+        @media (max-width: 1365px) {
             font-size: 46px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
         }
-        @media (max-width: 490px) {
+        @media (max-width: 767px) {
             font-size: 30px;
             font-style: normal;
             font-weight: 700;
@@ -223,15 +227,7 @@
             line-height: normal;
             border-radius: 2px;
             background: linear-gradient(90deg, #3126CA 0%, #705AD8 100%);
-            @media (max-width: 768px) {
-                padding: 4px 16px;
-                font-size: 46px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                width: max-content;
-            }
-            @media (max-width: 490px) {
+            @media (max-width: 767px) {
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 700;
@@ -248,17 +244,12 @@
         font-weight: 600;
         line-height: 34px;
         margin-top: 16px;
-        @media (max-width: 768px) {
+        @media (max-width: 1365px) {
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
             line-height: 34px;
-        }
-        @media (max-width: 490px) {
-            font-style: normal;
-            font-weight: 600;
-            line-height: 34px;
-        }
+        }        
     }
 }
 
@@ -281,7 +272,7 @@
 	z-index: 1000;
     transition: $transition200;
     cursor: pointer;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         display: none;
     }
     &::after {

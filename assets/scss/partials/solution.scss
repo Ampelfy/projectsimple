@@ -5,17 +5,17 @@
     @include block;
     .titleblock {
         flex: 0 0 53%;
-        @media (max-width: 1366px) {
+        @media (max-width: 1365px) {
             flex: 0 0 40%;
         }
         &__title {
-        text-align: left;
-        max-width: 530px;
-        @media (max-width: 490px) {
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
+            text-align: left;
+            max-width: 530px;
+            @media (max-width: 1365px) {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
         }
         &__description {
             margin-top: 16px;
@@ -26,7 +26,7 @@
     .container {
         display: flex;
         justify-content: space-between;
-        @media (max-width: 1366px) {
+        @media (max-width: 1365px) {
             flex-direction: column;
         }
     }
@@ -34,22 +34,25 @@
 .menusolution {
     flex: 0 0 47%;
     .container {
-        @media (max-width: 768px) {
+        @media (max-width: 1365px) {
+            margin-top: 60px;
             padding: 0;
         }
-    }
-    @media (max-width: 1366px) {
-        flex: 0 0 56%;
-    }
-    @media (max-width: 768px) {
-        margin-top: 60px;
-    }
-    @media (max-width: 490px) {
-        margin-top: 50px;
+        @media (max-width: 767px) {
+            margin-top: 50px;
+            padding: 0;
+        }
     }
     // .menusolution__list
     &__list {
         margin-left: auto;
+        @media (max-width: 1365px) {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: flex-end;
+        }
     }
     // .menusolution__item
     &__item {
@@ -64,7 +67,7 @@
         background: $color1;
         padding: 16px 24px;
         margin-bottom: 24px;
-        @media (max-width: 768px) {
+        @media (max-width: 1365px) {
             font-size: 16px;
             font-style: normal;
             font-weight: 400;

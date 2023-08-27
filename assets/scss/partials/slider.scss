@@ -3,25 +3,28 @@
     width: 1264px;
     height: 440px;
     text-align: center;
-    @media (max-width: 768px) {
-        width: 370px;
-        height: auto;
+    @media (max-width: 1365px) {
+        width: 600px;
+        height: 440px;
+    }
+    @media (max-width: 767px) {
+        width: 270px;
     }
 }
 
 .swiper-slide {
+    user-select: none !important;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     img {
         width: auto;
-        height: 340px;
-        @media (max-width: 768px) {
-            height: 90px;
-        }
+        height: auto;
     }
     p {
-        margin-top: 20px;
-        @media (max-width: 768px) {
-            margin-bottom: 60px;
-        }
+        margin-top: -70px;
     }
 }
 

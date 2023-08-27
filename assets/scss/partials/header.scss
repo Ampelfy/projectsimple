@@ -25,7 +25,7 @@
 }
 .menu {
     margin-left: 100px;
-    @media (max-width: 768px) {
+    @media (max-width: 1365px) {
 		display: none;
 	}
 		// .menu__list
@@ -51,7 +51,7 @@
 }
 .auth {
     margin-left: auto;
-    @media (max-width: 768px) {
+    @media (max-width: 1365px) {
 		display: none;
 	}
 		// .auth__list
@@ -73,7 +73,7 @@
     position: relative;
     display: none;
     margin-left: auto;
-    @media (max-width: 768px) {
+    @media (max-width: 1365px) {
 		display: block;
 	}
     .burger-nav {
@@ -82,6 +82,31 @@
         height: 2px;
         background-color: #0E2333;
         border-radius: 5px;
+        &._active {
+            background: none;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0;
+                width: 32px;
+                height: 2px;
+                background-color: #0E2333;
+                border-radius: 5px;
+                transform: rotate(-45deg);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                width: 32px;
+                height: 2px;
+                background-color: #0E2333;
+                border-radius: 5px;
+                transform: rotate(45deg);
+            }
+        }
         &::after {
             content: '';
             position: absolute;
@@ -103,7 +128,7 @@
             border-radius: 5px;
         }
     }
-    .menu__list {
+    .menumobile__list {
         position: absolute;
         top: 39px;
         right: -33px;
@@ -114,11 +139,38 @@
         transition: all 500ms ease-in-out;
         display: none;
         .list-top {
-            padding-top: 230px;
+            padding: 100px 95px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .menu__item {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+            .menu__link {
+
+            }
         }
         .list-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            li {
+                &:last-child {
+                    a {color: #504cd1;}
+                }
+                
+            }
+            .menu__item {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+            .menu__link {
+            }
         }
-        &.active {
+        &._active {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;

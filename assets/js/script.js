@@ -66,33 +66,22 @@ if (location.hash) {
 
 //=================
 //Menu
-$(function () {
-    $('.burger-nav').click(function (event) {
-        $('.menu__list').toggleClass('active')
-    }),
-    $('.burger-nav').click(function (event) {
-        $('.menu-mobile').removeClass('active')
-    });
-})
-
-//=================
-//Menu
-let iconMenu = document.querySelector(".icon-menu");
-if (iconMenu != null) {
+let burger = document.querySelector(".burger-nav");
+if (burger != null) {
 	let delay = 500;
-	let menuBody = document.querySelector(".menu__body");
-	iconMenu.addEventListener("click", function (e) {
+	let menuBody = document.querySelector(".menumobile__list");
+	burger.addEventListener("click", function (e) {
 		if (unlock) {
 			body_lock(delay);
-			iconMenu.classList.toggle("_active");
+			burger.classList.toggle("_active");
 			menuBody.classList.toggle("_active");
 		}
 	});
 };
 function menu_close() {
-	let iconMenu = document.querySelector(".icon-menu");
-	let menuBody = document.querySelector(".menu__body");
-	iconMenu.classList.remove("_active");
+	let burger = document.querySelector(".burger-nav");
+	let menuBody = document.querySelector(".menumobile__list");
+	burger.classList.remove("_active");
 	menuBody.classList.remove("_active");
 }
 //=================
@@ -187,217 +176,7 @@ for (let index = 0; index < tabs.length; index++) {
 		});
 	}
 }
-//=================
-/*
-Для родителя слойлеров пишем атрибут data-spoilers
-Для заголовков слойлеров пишем атрибут data-spoiler
-Если нужно включать\выключать работу спойлеров на разных размерах экранов
-пишем параметры ширины и типа брейкпоинта.
-Например: 
-data-spoilers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
-data-spoilers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
 
-Если нужно что бы в блоке открывался болько один слойлер добавляем атрибут data-one-spoiler
-*/
-
-// spoilerS
-const spoilersArray = document.querySelectorAll('[data-spoilers]');
-if (spoilersArray.length > 0) {
-	// Получение обычных слойлеров
-	const spoilersRegular = Array.from(spoilersArray).filter(function (item, index, self) {
-		return !item.dataset.spoilers.split(",")[0];
-	});
-	// Инициализация обычных слойлеров
-	if (spoilersRegular.length > 0) {
-		initspoilers(spoilersRegular);
-	}
-
-	// Получение слойлеров с медиа запросами
-	const spoilersMedia = Array.from(spoilersArray).filter(function (item, index, self) {
-		return item.dataset.spoilers.split(",")[0];
-	});
-
-	// Инициализация слойлеров с медиа запросами
-	if (spoilersMedia.length > 0) {
-		const breakpointsArray = [];
-		spoilersMedia.forEach(item => {
-			const params = item.dataset.spoilers;
-			const breakpoint = {};
-			const paramsArray = params.split(",");
-			breakpoint.value = paramsArray[0];
-			breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
-			breakpoint.item = item;
-			breakpointsArray.push(breakpoint);
-		});
-
-		// Получаем уникальные брейкпоинты
-		let mediaQueries = breakpointsArray.map(function (item) {
-			return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
-		});
-		mediaQueries = mediaQueries.filter(function (item, index, self) {
-			return self.indexOf(item) === index;
-		});
-
-		// Работаем с каждым брейкпоинтом
-		mediaQueries.forEach(breakpoint => {
-			const paramsArray = breakpoint.split(",");
-			const mediaBreakpoint = paramsArray[1];
-			const mediaType = paramsArray[2];
-			const matchMedia = window.matchMedia(paramsArray[0]);
-
-			// Объекты с нужными условиями
-			const spoilersArray = breakpointsArray.filter(function (item) {
-				if (item.value === mediaBreakpoint && item.type === mediaType) {
-					return true;
-				}
-			});
-			// Событие
-			matchMedia.addListener(function () {
-				initspoilers(spoilersArray, matchMedia);
-			});
-			initspoilers(spoilersArray, matchMedia);
-		});
-	}
-	// Инициализация
-	function initspoilers(spoilersArray, matchMedia = false) {
-		spoilersArray.forEach(spoilersBlock => {
-			spoilersBlock = matchMedia ? spoilersBlock.item : spoilersBlock;
-			if (matchMedia.matches || !matchMedia) {
-				spoilersBlock.classList.add('_init');
-				initspoilerBody(spoilersBlock);
-				spoilersBlock.addEventListener("click", setspoilerAction);
-			} else {
-				spoilersBlock.classList.remove('_init');
-				initspoilerBody(spoilersBlock, false);
-				spoilersBlock.removeEventListener("click", setspoilerAction);
-			}
-		});
-	}
-	// Работа с контентом
-	function initspoilerBody(spoilersBlock, hidespoilerBody = true) {
-		const spoilerTitles = spoilersBlock.querySelectorAll('[data-spoiler]');
-		if (spoilerTitles.length > 0) {
-			spoilerTitles.forEach(spoilerTitle => {
-				if (hidespoilerBody) {
-					spoilerTitle.removeAttribute('tabindex');
-					if (!spoilerTitle.classList.contains('_active')) {
-						spoilerTitle.nextElementSibling.hidden = true;
-					}
-				} else {
-					spoilerTitle.setAttribute('tabindex', '-1');
-					spoilerTitle.nextElementSibling.hidden = false;
-				}
-			});
-		}
-	}
-	function setspoilerAction(e) {
-		const el = e.target;
-		if (el.hasAttribute('data-spoiler') || el.closest('[data-spoiler]')) {
-			const spoilerTitle = el.hasAttribute('data-spoiler') ? el : el.closest('[data-spoiler]');
-			const spoilersBlock = spoilerTitle.closest('[data-spoilers]');
-			const onespoiler = spoilersBlock.hasAttribute('data-one-spoiler') ? true : false;
-			if (!spoilersBlock.querySelectorAll('._slide').length) {
-				if (onespoiler && !spoilerTitle.classList.contains('_active')) {
-					hidespoilersBody(spoilersBlock);
-				}
-				spoilerTitle.classList.toggle('_active');
-				_slideToggle(spoilerTitle.nextElementSibling, 500);
-			}
-			e.preventDefault();
-		}
-	}
-	function hidespoilersBody(spoilersBlock) {
-		const spoilerActiveTitle = spoilersBlock.querySelector('[data-spoiler]._active');
-		if (spoilerActiveTitle) {
-			spoilerActiveTitle.classList.remove('_active');
-			_slideUp(spoilerActiveTitle.nextElementSibling, 500);
-		}
-	}
-}
-//=================
-//Gallery
-let gallery = document.querySelectorAll('._gallery');
-if (gallery) {
-	gallery_init();
-}
-function gallery_init() {
-	for (let index = 0; index < gallery.length; index++) {
-		const el = gallery[index];
-		lightGallery(el, {
-			counter: false,
-			selector: 'a',
-			download: false
-		});
-	}
-}
-//=================
-//SearchInList
-function search_in_list(input) {
-	let ul = input.parentNode.querySelector('ul')
-	let li = ul.querySelectorAll('li');
-	let filter = input.value.toUpperCase();
-
-	for (i = 0; i < li.length; i++) {
-		let el = li[i];
-		let item = el;
-		txtValue = item.textContent || item.innerText;
-		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-			el.style.display = "";
-		} else {
-			el.style.display = "none";
-		}
-	}
-}
-//=================
-//DigiFormat
-function digi(str) {
-	var r = str.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
-	return r;
-}
-//=================
-//DiGiAnimate
-function digi_animate(digi_animate) {
-	if (digi_animate.length > 0) {
-		for (let index = 0; index < digi_animate.length; index++) {
-			const el = digi_animate[index];
-			const el_to = parseInt(el.innerHTML.replace(' ', ''));
-			if (!el.classList.contains('_done')) {
-				digi_animate_value(el, 0, el_to, 1500);
-			}
-		}
-	}
-}
-function digi_animate_value(el, start, end, duration) {
-	var obj = el;
-	var range = end - start;
-	// no timer shorter than 50ms (not really visible any way)
-	var minTimer = 50;
-	// calc step time to show all interediate values
-	var stepTime = Math.abs(Math.floor(duration / range));
-
-	// never go below minTimer
-	stepTime = Math.max(stepTime, minTimer);
-
-	// get current time and calculate desired end time
-	var startTime = new Date().getTime();
-	var endTime = startTime + duration;
-	var timer;
-
-	function run() {
-		var now = new Date().getTime();
-		var remaining = Math.max((endTime - now) / duration, 0);
-		var value = Math.round(end - (remaining * range));
-		obj.innerHTML = digi(value);
-		if (value == end) {
-			clearInterval(timer);
-		}
-	}
-
-	timer = setInterval(run, stepTime);
-	run();
-
-	el.classList.add('_done');
-}
 //=================
 //Popups
 let popup_link = document.querySelectorAll('._popup-link');
@@ -479,331 +258,6 @@ document.addEventListener('keydown', function (e) {
 });
 
 //=================
-//SlideToggle
-let _slideUp = (target, duration = 500) => {
-	if (!target.classList.contains('_slide')) {
-		target.classList.add('_slide');
-		target.style.transitionProperty = 'height, margin, padding';
-		target.style.transitionDuration = duration + 'ms';
-		target.style.height = target.offsetHeight + 'px';
-		target.offsetHeight;
-		target.style.overflow = 'hidden';
-		target.style.height = 0;
-		target.style.paddingTop = 0;
-		target.style.paddingBottom = 0;
-		target.style.marginTop = 0;
-		target.style.marginBottom = 0;
-		window.setTimeout(() => {
-			target.hidden = true;
-			target.style.removeProperty('height');
-			target.style.removeProperty('padding-top');
-			target.style.removeProperty('padding-bottom');
-			target.style.removeProperty('margin-top');
-			target.style.removeProperty('margin-bottom');
-			target.style.removeProperty('overflow');
-			target.style.removeProperty('transition-duration');
-			target.style.removeProperty('transition-property');
-			target.classList.remove('_slide');
-		}, duration);
-	}
-}
-let _slideDown = (target, duration = 500) => {
-	if (!target.classList.contains('_slide')) {
-		target.classList.add('_slide');
-		if (target.hidden) {
-			target.hidden = false;
-		}
-		let height = target.offsetHeight;
-		target.style.overflow = 'hidden';
-		target.style.height = 0;
-		target.style.paddingTop = 0;
-		target.style.paddingBottom = 0;
-		target.style.marginTop = 0;
-		target.style.marginBottom = 0;
-		target.offsetHeight;
-		target.style.transitionProperty = "height, margin, padding";
-		target.style.transitionDuration = duration + 'ms';
-		target.style.height = height + 'px';
-		target.style.removeProperty('padding-top');
-		target.style.removeProperty('padding-bottom');
-		target.style.removeProperty('margin-top');
-		target.style.removeProperty('margin-bottom');
-		window.setTimeout(() => {
-			target.style.removeProperty('height');
-			target.style.removeProperty('overflow');
-			target.style.removeProperty('transition-duration');
-			target.style.removeProperty('transition-property');
-			target.classList.remove('_slide');
-		}, duration);
-	}
-}
-let _slideToggle = (target, duration = 500) => {
-	if (target.hidden) {
-		return _slideDown(target, duration);
-	} else {
-		return _slideUp(target, duration);
-	}
-}
-//========================================
-//Wrap
-function _wrap(el, wrapper) {
-	el.parentNode.insertBefore(wrapper, el);
-	wrapper.appendChild(el);
-}
-//========================================
-//RemoveClasses
-function _removeClasses(el, class_name) {
-	for (var i = 0; i < el.length; i++) {
-		el[i].classList.remove(class_name);
-	}
-}
-//========================================
-//IsHidden
-function _is_hidden(el) {
-	return (el.offsetParent === null)
-}
-// ShowMore Beta ========================
-let moreBlocks = document.querySelectorAll('._more-block');
-if (moreBlocks.length > 0) {
-	let wrapper = document.querySelector('.wrapper');
-	for (let index = 0; index < moreBlocks.length; index++) {
-		const moreBlock = moreBlocks[index];
-		let items = moreBlock.querySelectorAll('._more-item');
-		if (items.length > 0) {
-			let itemsMore = moreBlock.querySelector('._more-link');
-			let itemsContent = moreBlock.querySelector('._more-content');
-			let itemsView = itemsContent.getAttribute('data-view');
-			if (getComputedStyle(itemsContent).getPropertyValue("transition-duration") === '0s') {
-				itemsContent.style.cssText = "transition-duration: 1ms";
-			}
-			itemsMore.addEventListener("click", function (e) {
-				if (itemsMore.classList.contains('_active')) {
-					setSize();
-				} else {
-					setSize('start');
-				}
-				itemsMore.classList.toggle('_active');
-				e.preventDefault();
-			});
-
-			let isScrollStart;
-			function setSize(type) {
-				let resultHeight;
-				let itemsContentHeight = 0;
-				let itemsContentStartHeight = 0;
-
-				for (let index = 0; index < items.length; index++) {
-					if (index < itemsView) {
-						itemsContentHeight += items[index].offsetHeight;
-					}
-					itemsContentStartHeight += items[index].offsetHeight;
-				}
-				resultHeight = (type === 'start') ? itemsContentStartHeight : itemsContentHeight;
-				isScrollStart = window.innerWidth - wrapper.offsetWidth;
-				itemsContent.style.height = `${resultHeight}px`;
-			}
-
-			itemsContent.addEventListener("transitionend", updateSize, false);
-
-			function updateSize() {
-				let isScrollEnd = window.innerWidth - wrapper.offsetWidth;
-				if (isScrollStart === 0 && isScrollEnd > 0 || isScrollStart > 0 && isScrollEnd === 0) {
-					if (itemsMore.classList.contains('_active')) {
-						setSize('start');
-					} else {
-						setSize();
-					}
-				}
-			}
-			window.addEventListener("resize", function (e) {
-				if (!itemsMore.classList.contains('_active')) {
-					setSize();
-				} else {
-					setSize('start');
-				}
-			});
-			setSize();
-		}
-	}
-}
-//==RATING======================================
-const ratings = document.querySelectorAll('.rating');
-if (ratings.length > 0) {
-	initRatings();
-}
-// Основная функция
-function initRatings() {
-	let ratingActive, ratingValue;
-	// "Бегаем" по всем рейтингам на странице
-	for (let index = 0; index < ratings.length; index++) {
-		const rating = ratings[index];
-		initRating(rating);
-	}
-
-	// Инициализируем конкретный рейтинг
-	function initRating(rating) {
-		initRatingVars(rating);
-
-		setRatingActiveWidth();
-
-		if (rating.classList.contains('rating_set')) {
-			setRating(rating);
-		}
-	}
-
-	// Инициализайция переменных
-	function initRatingVars(rating) {
-		ratingActive = rating.querySelector('.rating__active');
-		ratingValue = rating.querySelector('.rating__value');
-	}
-	// Изменяем ширину активных звезд
-	function setRatingActiveWidth(index = ratingValue.innerHTML) {
-		const ratingActiveWidth = index / 0.05;
-		ratingActive.style.width = `${ratingActiveWidth}%`;
-	}
-	// Возможность указать оценку 
-	function setRating(rating) {
-		const ratingItems = rating.querySelectorAll('.rating__item');
-		for (let index = 0; index < ratingItems.length; index++) {
-			const ratingItem = ratingItems[index];
-			ratingItem.addEventListener("mouseenter", function (e) {
-				// Обновление переменных
-				initRatingVars(rating);
-				// Обновление активных звезд
-				setRatingActiveWidth(ratingItem.value);
-			});
-			ratingItem.addEventListener("mouseleave", function (e) {
-				// Обновление активных звезд
-				setRatingActiveWidth();
-			});
-			ratingItem.addEventListener("click", function (e) {
-				// Обновление переменных
-				initRatingVars(rating);
-
-				if (rating.dataset.ajax) {
-					// "Отправить" на сервер
-					setRatingValue(ratingItem.value, rating);
-				} else {
-					// Отобразить указанную оцнку
-					ratingValue.innerHTML = index + 1;
-					setRatingActiveWidth();
-				}
-			});
-		}
-	}
-
-	async function setRatingValue(value, rating) {
-		if (!rating.classList.contains('rating_sending')) {
-			rating.classList.add('rating_sending');
-
-			// Отправика данных (value) на сервер
-			let response = await fetch('rating.json', {
-				method: 'GET',
-
-				//body: JSON.stringify({
-				//	userRating: value
-				//}),
-				//headers: {
-				//	'content-type': 'application/json'
-				//}
-
-			});
-			if (response.ok) {
-				const result = await response.json();
-
-				// Получаем новый рейтинг
-				const newRating = result.newRating;
-
-				// Вывод нового среднего результата
-				ratingValue.innerHTML = newRating;
-
-				// Обновление активных звезд
-				setRatingActiveWidth();
-
-				rating.classList.remove('rating_sending');
-			} else {
-				alert("Ошибка");
-
-				rating.classList.remove('rating_sending');
-			}
-		}
-	}
-}
-//========================================
-//Animate
-function animate({ timing, draw, duration }) {
-	let start = performance.now();
-	requestAnimationFrame(function animate(time) {
-		// timeFraction изменяется от 0 до 1
-		let timeFraction = (time - start) / duration;
-		if (timeFraction > 1) timeFraction = 1;
-
-		// вычисление текущего состояния анимации
-		let progress = timing(timeFraction);
-
-		draw(progress); // отрисовать её
-
-		if (timeFraction < 1) {
-			requestAnimationFrame(animate);
-		}
-
-	});
-}
-function makeEaseOut(timing) {
-	return function (timeFraction) {
-		return 1 - timing(1 - timeFraction);
-	}
-}
-function makeEaseInOut(timing) {
-	return function (timeFraction) {
-		if (timeFraction < .5)
-			return timing(2 * timeFraction) / 2;
-		else
-			return (2 - timing(2 * (1 - timeFraction))) / 2;
-	}
-}
-function quad(timeFraction) {
-	return Math.pow(timeFraction, 2)
-}
-function circ(timeFraction) {
-	return 1 - Math.sin(Math.acos(timeFraction));
-}
-/*
-animate({
-	duration: 1000,
-	timing: makeEaseOut(quad),
-	draw(progress) {
-		window.scroll(0, start_position + 400 * progress);
-	}
-});*/
-
-//Полифилы
-(function () {
-	// проверяем поддержку
-	if (!Element.prototype.closest) {
-		// реализуем
-		Element.prototype.closest = function (css) {
-			var node = this;
-			while (node) {
-				if (node.matches(css)) return node;
-				else node = node.parentElement;
-			}
-			return null;
-		};
-	}
-})();
-(function () {
-	// проверяем поддержку
-	if (!Element.prototype.matches) {
-		// определяем свойство
-		Element.prototype.matches = Element.prototype.matchesSelector ||
-			Element.prototype.webkitMatchesSelector ||
-			Element.prototype.mozMatchesSelector ||
-			Element.prototype.msMatchesSelector;
-	}
-})();
-
-//=================
 //Scroll to top
 var btn = $('#scrollToTop');
 $(window).scroll(function() {
@@ -838,29 +292,25 @@ $(function () {
 const swiper = new Swiper('.swiper', {
 	// Optional parameters
 	loop: true,
-	scrollbar: {
-        el: ".swiper-scrollbar",
-        hide: true,
-      },
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev',
 	},
 	breakpoints: {
-        320: {
-			scrollbar: {
-				el: ".swiper-scrollbar",
-				hide: false,
-			},
-        },
-        768: {
-          slidesPerView: 1,
-        },
-        1024: {
-          slidesPerView: 1,
-        },
-      },
-  });
+	320: {
+		scrollbar: {
+			el: ".swiper-scrollbar",
+			hide: false,
+		},
+	},
+	768: {
+		slidesPerView: 1,
+		},
+	1024: {
+		slidesPerView: 1,
+		},
+	},
+});
 
 
    

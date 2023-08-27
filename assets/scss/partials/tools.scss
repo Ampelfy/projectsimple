@@ -2,25 +2,27 @@
 // Tools styles
 //====================================================================================================
 
-
-
 .tools {
     @include block;
+    padding-bottom: 160px;
+    @media (max-width: 1365px) {
+		padding-bottom: 80px;
+	}
+    @media (max-width: 767px) {
+		padding-bottom: 60px;
+	}
     ._tabs {
         position: relative;
         display: flex;
         justify-content: space-between;
         margin-top: 80px;
-        @media (max-width: 1366px) {
-            flex-direction: column;
-        }
-        @media (max-width: 768px) {
+        @media (max-width: 1365px) {
             flex-direction: column-reverse;
         }
     }
 
     .titleblock {
-        @media (max-width: 768px) {
+        @media (max-width: 1365px) {
             margin-bottom: 160px;
         }
         // .titleblock__title
@@ -36,13 +38,16 @@
         // .tabs-block__nav
         &__nav {
             flex: 0 0 19%;
-            @media (max-width: 1366px) {
-                flex: 0 0 22%;
-            }
+            // @media (max-width: 1365px) {
+            //     position: relative;
+            // }
         }
         // .tabs-block__body
         &__body {
             flex: 0 0 64%;
+            @media (max-width: 1365px) {
+                padding-bottom: 20px;
+            }
         }
         p {
             max-width: 750px;
@@ -52,7 +57,7 @@
             font-weight: 400;
             line-height: 24px;
             margin-top: 20px;
-            @media (max-width: 768px) {
+            @media (max-width: 1365px) {
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -85,7 +90,14 @@
             background: $color1;
             border-radius: 10px;
             box-shadow: 0px 20px 40px -15px rgba(110, 89, 216, 0.30);
-            @media (max-width: 768px) {
+            @media (max-width: 1365px) {
+                position: absolute;
+                top: -54px;
+                left: 135px;
+                transform: translate(-50%, -50%);
+                width: max-content;
+            }
+            @media (max-width: 767px) {
                 position: absolute;
                 top: -54px;
                 left: 50%;

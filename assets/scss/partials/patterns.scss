@@ -4,15 +4,12 @@
 
 .patterns {
     position: relative;
-    padding: 160px 0;
+    padding: 120px 0;
     background-color: $color1;
-	@media (max-width: 1366px) {
-		padding: 120px 0;
-	}
-	@media (max-width: 768px) {
+    @media (max-width: 1365px) {
 		padding: 80px 0;
 	}
-	@media (max-width: 490px) {
+    @media (max-width: 767px) {
 		padding: 40px 0;
 	}
     &:before {
@@ -30,7 +27,7 @@
 		// .titleblock__title
 
 		&__title {
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 text-align: left;
             }
 		}
@@ -38,7 +35,7 @@
 		// .titleblock__description
 
 		&__description {
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 text-align: left;
             }
 		}
@@ -49,7 +46,7 @@
         @media (max-width: 1366px) {
             flex-direction: column;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             padding: 80px 0;
         }
     }
@@ -104,7 +101,7 @@
         }
         p {
             @media (max-width: 768px) {
-                flex: 0 0 80%;
+                flex: 0 0 76%;
             }
         }
     }

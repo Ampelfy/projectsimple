@@ -12,7 +12,7 @@
     margin-top: 80px;
     padding: 64px 0;
     background-color: $color1;
-    @media (max-width: 490px) {
+	@media (max-width: 1365px) {
         padding: 34px 0;
 	}
 		// .menuteam__list
@@ -20,7 +20,7 @@
             display: flex;
             justify-content: space-between;
             margin: 0 20px;
-            @media (max-width: 1366px) {
+            @media (max-width: 1365px) {
                 flex-direction: column;
             }
 		}
@@ -33,14 +33,7 @@
             font-weight: 400;
             line-height: 27px;
             flex: 0 0 23%;
-            @media (max-width: 1366px) {
-                flex: 0 0 100%;
-                margin-bottom: 34px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-            @media (max-width: 490px) {
+            @media (max-width: 1365px) {
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -58,10 +51,8 @@
                 width: 4px;
                 height: 54px;
                 background-color: rgba(80, 64, 209, 0.50);
-                @media (max-width: 1366px) {
-                    height: 27px;
-                }
-                @media (max-width: 490px) {
+                border-radius: 1px;
+                @media (max-width: 1365px) {
                     height: 100%;
                 }
             }

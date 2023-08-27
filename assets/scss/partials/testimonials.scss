@@ -14,24 +14,12 @@
         display: flex;
         justify-content: center;
         justify-content: space-between;
-        @media (max-width: 1366px) {
+        @media (max-width: 1365px) {
             flex-direction: column;
         }
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: -546px;
-            left: 0px;
-            background-image: url(../images/powerful-vector-left.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 1239px;
-            height: 2000px;
-            z-index: -1;
-        }
         .leftblock {
-            flex: 0 0 32%;
-            @media (max-width: 1366px) {
+            flex: 0 0 33%;
+            @media (max-width: 1365px) {
                 flex: 0 0 40%;
             }
             &_desc {
@@ -64,7 +52,7 @@
     // .testimonials__menu
 
     &__menu {
-        @media (max-width: 768px) {
+        @media (max-width: 1365px) {
             margin-top: 60px;
         }
     }
@@ -77,7 +65,7 @@
         padding: 50px 84px;
         border-radius: 10px;
         border: 3px solid #eaeaff;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             flex-direction: column;
             padding: 50px 20px;
         }
@@ -104,7 +92,7 @@
         }
         .right {
             margin-left: 60px;
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 margin-left: 0px;
                 margin-top: 40px;
             }
