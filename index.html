@@ -76,7 +76,7 @@
 		</div>
 	</div>
 	<!-- ================================================================= POPUPS-->
-	<header class="header">
+	<header id="header" class="header">
 		<div class="container container_flex">
 			<div class="logo">
 				<a href="#"><img src="./assets/images/logo.png" alt="logo"></a>
@@ -135,9 +135,13 @@
 					</div>
 					<p class="top__description">First ever AI Agile Software Management Platform to <span>make Teams
 							better. </span></p>
-					<div class="buttons"><a
+					<div class="buttons">
+							<a id="trial"
 							href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
-							class="btnxl btnxl_blue m-auto">Start trial now</a></div>
+							class="btnxl btnxl_blue m-auto">Start trial now</a>
+							<a id="demo" href="#demo" class="btnxl btnxl_blue _popup-link">Schedule a Demo</a>
+						</div>
+					
 				</div>
 				<div class="firstview__bottom">
 					<img src="./assets/images/first-view.svg" alt="agile-right">
@@ -170,16 +174,13 @@
 				<div class="menusolution">
 					<div class="container">
 						<ul class="menusolution__list">
-							<li class="menusolution__item">Designed for Multi-Team environments</li>
-							<li class="menusolution__item">Supports Scrum and Scrumban methologies</li>
-							<li class="menusolution__item">Built with integrated principles of Lean, XP, and Flow
-							</li>
-							<li class="menusolution__item">Provides transparent visibility for entire organization
-							</li>
+							<li class="menusolution__item">No heavy lifting or custom configurations</li>
+							<li class="menusolution__item">Clear, consistent, and well defined development process</li>
+							<li class="menusolution__item">Single Product Backlog across for all Teams</li>
+							<li class="menusolution__item">Superior approach to backlog management and prioritization</li>
 							<li class="menusolution__item">Work structured in Value Based Streams</li>
 							<li class="menusolution__item">Optimized for collaborative development and teamwork</li>
-							<li class="menusolution__item">Eliminates micromanagement and guesswork where things are
-							</li>
+							<li class="menusolution__item">Eliminates micromanagement and guesswork where things are</li>
 							<li class="menusolution__item">And lastly, it works very very fast!</li>
 						</ul>
 					</div>
@@ -192,13 +193,14 @@
 					<h3>Large Title for Your Attention <span>Join Today</span></h3>
 				</div>
 				<div class="buttons">
-					<a href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
+					<a id="trial" href="https://go.projectsimple.ai/auth/realms/project-simple/protocol/openid-connect/auth?client_id=login-app&redirect_uri=https%3A%2F%2Fgo.projectsimple.ai%2F&state=7f9dc5f6-1b74-4f6e-896c-fd4c556d750d&response_mode=fragment&response_type=code&scope=openid&nonce=c821ae38-24b6-4759-8a5f-b0a1c756aa32"
 						class="btnxl btnxl_white m-auto">Start trial now</a>
+					<a id="demo" href="#demo" class="btnxl btnxl_white _popup-link">Schedule a Demo</a>
 				</div>
 			</div>
 		</div>
 		<div class="tools">
-			<div class="container">
+			<div class="container-small">
 				<div class="titleblock">
 					<h2 class="titleblock__title">One Platform, All Tools, <span>Out of the Box</span></h2>
 					<p class="titleblock__description">We apply the power of AI to drive continuous improvement</p>
@@ -276,10 +278,9 @@
 			</div>
 		</div>
 		<div class="patterns">
-			<div class="container">
+			<div class="container-small">
 				<div class="titleblock">
-					<h2 class="titleblock__title"><span>Say goodbye</span> to Agile Anti-Patterns!</h2>
-					<p class="titleblock__description">We made it easy to do Agile right!</p>
+					<h2 class="titleblock__title">Say goodbye to Agile Anti-Patterns!</h2>
 				</div>
 				<div class="dflex">
 					<ul class="todolist">
@@ -292,7 +293,7 @@
 						<li class="todolist__item"><span>7</span><p>Explicitly defined process with clear Definition of Ready and Definition of Done</p></li>
 					</ul>
 					<div class="listimg">
-						<img src="./assets/images/patterns.svg" alt="patterns">
+						<img src="./assets/images/decor.svg" alt="patterns">
 					</div>
 				</div>
 			</div>
@@ -319,7 +320,7 @@
 										<!-- Slides -->
 										<div class="swiper-slide">
 											<img src="./assets/images/slider/slide1.svg" alt="">
-											<p>1. Create your own company AI to support the Teams</p>
+											<p>Create your own company AI to support the Teams</p>
 										</div>
 										<div class="swiper-slide">
 											<img src="./assets/images/slider/slide4.svg" alt="">
@@ -441,7 +442,7 @@
 			<div class="container">
 				<div class="leftblock">
 					<div class="titleblock">
-						<h2 class="titleblock__title">Our Customers <span>Love</span> </br> what We Do</h2>
+						<h2 class="titleblock__title">Our Customers <span>Love</span> </br> what we Do</h2>
 						<p class="titleblock__description">We solved the pesky challenges created by tools like JIRA
 						</p>
 					</div>
@@ -504,9 +505,9 @@
 	<footer class="footer">
 		<div class="container">
 			<ul class="footer__menu">
-				<li class="footer__item"><a href="#"><img src="./assets/images/facebook.png" alt="facebook"></a></li>
-				<li class="footer__item"><a href="#"><img src="./assets/images/instagram.png" alt="instagram"></a></li>
-				<li class="footer__item"><a href="#"><img src="./assets/images/linkedin.png" alt="linkedin"></a></li>
+				<li class="footer__item"><a href="https://www.facebook.com/ProjectSimpleAI"><img src="./assets/images/icons/facebook.svg" alt="facebook"></a></li>
+				<li class="footer__item"><a href="https://www.instagram.com/project_simple_ai/"><img src="./assets/images/icons/instagram.svg" alt="instagram"></a></li>
+				<li class="footer__item"><a href="https://www.linkedin.com/company/project-simple-ai/"><img src="./assets/images/icons/link.svg" alt="linkedin"></a></li>
 			</ul>
 			<p class="reserved">© 2023 Project Simple. All rights reserved.</p>
 			<div class="footer__bottom">

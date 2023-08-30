@@ -2,6 +2,7 @@
 // First View styles
 //====================================================================================================
 .firstview {
+    padding-top: 81px;
     @include block;
     	&::before {
 		content: '';
@@ -33,6 +34,9 @@
             display: flex;
             justify-content: center;
             max-width: 80%;
+            @media (max-width: 767px) {
+                max-width: 100%;       
+            }
         }
         .powered {
             position: absolute;
@@ -68,6 +72,10 @@
                     background-image: url(../images/poligon-arrow.png);
                     width: 13px;
                     height: 13px;
+                    @media (max-width: 767px) {
+                        content: '';
+                        background-image: none;
+                    }
                 }
             }
         }
@@ -89,7 +97,7 @@
                 font-size: 40px;
                 font-weight: 800;
                 line-height: 56px;
-                margin-bottom: 24px;
+                margin-bottom: 0;
             }
         }
         // .top__description
@@ -105,7 +113,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 27px;
-                margin-bottom: 46px;
+                margin-bottom: 32px;
             }
             span {
                 font-weight: 600;
@@ -123,5 +131,19 @@
     &__bottom {
         margin-top: 64px;
         text-align: center;
+    }
+}
+
+#trial {
+    display: inline-block;
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+#demo {
+    display: none;
+    @media (max-width: 767px) {
+        display: inline-block;
     }
 }

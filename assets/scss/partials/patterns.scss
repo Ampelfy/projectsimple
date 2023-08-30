@@ -3,7 +3,7 @@
 //====================================================================================================
 .patterns {
     position: relative;
-    padding: 120px 0 0 0;
+    padding: 120px 0;
     background-color: $color1;
     @media (max-width: 1365px) {
 		padding: 80px 0 0 0;
@@ -21,39 +21,44 @@
         height: 1196px;
         z-index: -1;
     }
+    .container {
+        max-width: fit-content;
+        width: 1356px;
+    }
     .titleblock {
         text-align: center;
 		// .titleblock__title
 		&__title {
             @media (max-width: 767px) {
-                text-align: left;
+                text-align: center;
             }
 		}
 		// .titleblock__description
 		&__description {
             @media (max-width: 767px) {
-                text-align: left;
+                text-align: center;
             }
 		}
     }   
     .dflex {
-        padding: 120px 0;
+        padding: 120px 0 0 0;
         justify-content: space-between;
         @media (max-width: 1365px) {
             flex-direction: column;
             padding: 60px 0 0 0;
         }
         @media (max-width: 767px) {
-            padding: 80px 0 0 0;
+            padding: 30px 0 0 0;
+            flex-direction: column-reverse;
         }
     }
 }
 .todolist {
-    flex: 0 0 51%;
+    flex: 0 0 61%;
     @media (max-width: 1365px) {
         flex: 0 0 60%;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         margin-bottom: 38px;
     }
     // .todolist__item
@@ -72,6 +77,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: 27px;
+            margin-bottom: 12px;
         }
         &:last-child {
             margin-bottom: 0;
@@ -90,28 +96,41 @@
             font-weight: 600;
             line-height: 34px;
             margin-right: 26px;
+            @media (max-width: 767px) {
+                width: 32px;
+                height: 26px;
+                line-height: 25px;
+                font-size: 14px;
+                margin-right: 16px;
+            }
         }
         p {
-            @media (max-width: 768px) {
+            @media (max-width: 778px) {
                 flex: 0 0 76%;
             }
         }
     }
 }
 .listimg {
-    flex: 0 0 42%;
+    flex: 0 0 39%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     @media (max-width: 1365px) {
         flex: 0 0 40%;
-        justify-content: center;
+        justify-content: center;            
+    }
+    @media (max-width: 767px) {
+        margin-bottom: 30px;
     }
     img {
-        width: 100%;
-        height: auto;
+        width: 550px;
+        height: 380px;
         @media (max-width: 1365px) {
             max-height: 480px;
+        }
+        @media (max-width: 767px) {
+            height: auto;
         }
     }
 }

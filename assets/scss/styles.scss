@@ -5,7 +5,10 @@
 //<МИКСИНЫ>===============================================================================================
 @mixin block {
 	position: relative;
-	margin-top: 160px;
+	margin-bottom: 140px;
+	&:first-child {
+		margin-top: 140px;
+	}
 	@media (max-width: 1366px) {
 		margin-top: 120px;
 	}
@@ -13,7 +16,10 @@
 		margin-top: 80px;
 	}
 	@media (max-width: 767px) {
-		margin-top: 60px;
+		margin-bottom: 60px;
+		&:first-child {
+			margin-top: 60px;
+		}
 	}
 }
 @mixin transition200 {
@@ -37,7 +43,7 @@ $fontSize: 16;
 body {
 	position: relative;
 	font-family: $fontFamily;
-	background-color: $color2;
+    background-color: #F7F8FC;
 	transition: $transition300;
 	&._lock {
 		overflow: hidden;
@@ -66,6 +72,20 @@ body {
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
 	max-width: $container + px;
+	margin: 0 auto;
+	padding: 0 1.25rem;
+	@media (max-width: 1365px) {
+		max-width: none;
+		padding: 0 34px;
+	}
+	@media (max-width: 767px) {
+		max-width: none;
+		padding: 0 20px;
+	}
+}
+
+.container-small {
+	max-width: $container-small + px;
 	margin: 0 auto;
 	padding: 0 1.25rem;
 	@media (max-width: 1365px) {

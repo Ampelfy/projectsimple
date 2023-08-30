@@ -2,6 +2,7 @@
 // Powerful styles
 //====================================================================================================
 .powerful {
+    display: none;
     @include block;
     .titleblock {
         text-align: center;
