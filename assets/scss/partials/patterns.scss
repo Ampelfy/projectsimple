@@ -73,11 +73,13 @@
         line-height: 27px;
         margin-bottom: 36px;
         @media (max-width: 768px) {
-            font-size: 16px;
+            font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: 27px;
             margin-bottom: 12px;
+            display: flex;
+            align-items: start;
         }
         &:last-child {
             margin-bottom: 0;
@@ -102,11 +104,12 @@
                 line-height: 25px;
                 font-size: 14px;
                 margin-right: 16px;
+                margin-top: 8px;
             }
         }
         p {
             @media (max-width: 778px) {
-                flex: 0 0 76%;
+                flex: 0 0 80%;
             }
         }
     }
