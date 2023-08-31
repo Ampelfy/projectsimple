@@ -60,7 +60,7 @@
                 background: linear-gradient(117deg, #3291FD 0%, #8666FD 100%);
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-                text-wrap: nowrap;
+                width: max-content;
                 @media (max-width: 767px) {
                     letter-spacing: 0.35px;        
                 }
