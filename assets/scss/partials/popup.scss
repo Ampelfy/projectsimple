@@ -7,21 +7,21 @@
 	padding: 30px 10px;
 	position: fixed;
 	top: 0px;
-	left: 0;
+	left: 5px;
 	width: 100%;
 	height: 100%;
 	transition: visibility 0.2s ease 0s;
 	visibility: hidden;
-	&::after {
-		content: '';
-		position: absolute;
-		top: -240px;
-		right: 0px;
-		background-image: url(../images/vector-right-1.png);
-		width: 508px;
-		height: 2168px;
-		z-index: 1;
-	}
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: -240px;
+	// 	right: 0px;
+	// 	background-image: url(../images/vector-right-1.png);
+	// 	width: 508px;
+	// 	height: 2168px;
+	// 	z-index: 1;
+	// }
 	&::before {
 		content: "";
 		background-color: $color2;
@@ -78,22 +78,22 @@
 		transition: all 0.3s ease 0s;
         text-align: center;
 		z-index: 2;
-		@media (max-width: 320px) {
+		@media (max-width: 767px) {
 			padding: 24px 16px;
         }
 	}
 	// .popup__close
-	&__close {
-		width: 24px;
-		height: 24px;
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		cursor: pointer;
-		z-index: 30;
-		background: url(../images/icons/close.svg) 0 0 no-repeat;
-		z-index: 2;
-	}
+	// &__close {
+	// 	width: 24px;
+	// 	height: 24px;
+	// 	position: absolute;
+	// 	top: 10px;
+	// 	right: 10px;
+	// 	cursor: pointer;
+	// 	z-index: 30;
+	// 	background: url(../images/icons/close.svg) 0 0 no-repeat;
+	// 	z-index: 2;
+	// }
 }
 .form-title {
     color: #5F68FF;
@@ -103,6 +103,11 @@
     font-weight: 700;
     line-height: normal;
     line-height: normal;
+	@media (max-width: 767px) {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 34px;
+	}
 }
 input::-webkit-input-placeholder,
 input:focus::-webkit-input-placeholder {
@@ -111,20 +116,41 @@ input:focus::-webkit-input-placeholder {
     font-style: normal;
     font-weight: 400;
     line-height: 27px;
+	@media (max-width: 767px) {
+		color: #AEB9C6;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 27px;
+	}
 }
 .popup__body {
     form {
         margin-top: 32px;
+		@media (max-width: 767px) {
+			margin-top: 16px;
+        }
         input {
             border-radius: 10px;
             border: 1px solid #AEB9C6;
             background: var(--ffffff, #FFF);
             padding: 16px;
+			margin-bottom: 16px;
+			@media (max-width: 767px) {
+				padding: 8px 16px;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 27px;
+			}
         }
         textarea {
             resize: none;
             height: 80px;
             padding: 16px;
+			@media (max-width: 767px) {
+				min-height: 112px;
+			}
         }
         button {
             margin-top: 32px;
@@ -133,4 +159,8 @@ input:focus::-webkit-input-placeholder {
 			}
         }
     }
+}
+
+.g-3, .gy-3 {
+    --bs-gutter-y: none;
 }
