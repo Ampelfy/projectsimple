@@ -70,19 +70,23 @@ let burger = document.querySelector(".burger");
 if (burger != null) {
 	let delay = 500;
 	let menuBody = document.querySelector(".menumobile__list");
+	let burgerNav = document.querySelector(".burger_nav");
 	burger.addEventListener("click", function (e) {
 		if (unlock) {
 			body_lock(delay);
 			burger.classList.toggle("_active");
 			menuBody.classList.toggle("_active");
+			burgerNav.classList.toggle("_active");
 		}
 	});
 };
 function menu_close() {
 	let burger = document.querySelector(".burger");
 	let menuBody = document.querySelector(".menumobile__list");
+	let burgerNav = document.querySelector(".burger_nav");
 	burger.classList.remove("_active");
 	menuBody.classList.remove("_active");
+	burgerNav.classList.remove("_active");
 }
 //=================
 //BodyLock
