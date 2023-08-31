@@ -129,6 +129,9 @@
         cursor: pointer;
         &:last-child {
             margin-bottom: 0px;
+            @media (max-width: 767px) {
+                margin-bottom: auto;
+            }
         }
         &._active {
             background: $color1;
