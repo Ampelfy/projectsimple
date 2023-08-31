@@ -14,8 +14,9 @@
         display: flex;
         justify-content: space-between;
         margin-top: 80px;
-        @media (min-width: 7685px) and (max-width: 1365px) {
+        @media (min-width: 768px) and (max-width: 1365px) {
             flex-direction: column-reverse;
+            margin-top: 140px;
         }
         @media (max-width: 767px) {
             flex-direction: column;
@@ -24,7 +25,8 @@
     }
     .titleblock {
         @media (max-width: 1365px) {
-            margin-bottom: 160px;
+            // margin-bottom: 160px;
+            padding-right: 50px;
         }
         @media (max-width: 767px) {
             margin-bottom: 0px;
@@ -132,20 +134,12 @@
             background: $color1;
             border-radius: 10px;
             box-shadow: 0px 20px 40px -15px rgba(110, 89, 216, 0.30);
-            @media (min-width: 7685px) and (max-width: 1365px) {
+            @media (min-width: 768px) and (max-width: 1365px) {
                 position: absolute;
-                top: -54px;
-                left: 135px;
-                transform: translate(-50%, -50%);
+                top: -74px;
+                left: 0px;
                 width: max-content;
             }
-            // @media (max-width: 767px) {
-            //     position: absolute;
-            //     top: -54px;
-            //     left: 50%;
-            //     transform: translate(-50%, -50%);
-            //     width: max-content;
-            // }
         }
     }
     ._tabs-block {

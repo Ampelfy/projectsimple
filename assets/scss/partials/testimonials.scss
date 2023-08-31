@@ -40,7 +40,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 27px;
-                @media (max-width: 767px) {
+                @media (max-width: 1365px) {
                     font-size: 14px;
                 }
             }
@@ -62,6 +62,9 @@
         padding: 50px 84px;
         border-radius: 10px;
         border: 3px solid #eaeaff;
+        @media (max-width: 1365px) {
+            margin-bottom: 16px;
+        }
         @media (max-width: 767px) {
             flex-direction: column;
             padding: 24px 20px;
@@ -78,7 +81,7 @@
                 font-weight: 400;
                 line-height: 27px;
                 @media (max-width: 1365px) {
-                    font-size: 16px;
+                    font-size: 14px;
                     line-height: 27px;
                 }
                 @media (max-width: 767px) {
