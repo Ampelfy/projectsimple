@@ -166,6 +166,9 @@
 }
 .btngroup {
     margin: 0 0 63px 0;
+    @media (max-width: 767px) {
+        margin: 0 0 33px 0;
+    }
     a {
         margin-right: 24px;
         &:last-child {
