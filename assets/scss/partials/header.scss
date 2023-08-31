@@ -144,12 +144,12 @@
     }
     .menumobile__list {
         position: absolute;
-        top: 39px;
+        top: 55px;
         right: -40px;
         background-color: #fff;
         width: 100vw;
         height: 200vw;
-        z-index: 99999;
+        z-index: 9;
         transition: all 500ms ease-in-out;
         display: none;
         @media (max-width: 767px) {
@@ -209,6 +209,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            z-index: 9;
         }
     }
 }

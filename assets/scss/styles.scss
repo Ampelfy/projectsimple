@@ -45,6 +45,10 @@ body {
 	font-family: $fontFamily;
     background-color: #F7F8FC;
 	transition: $transition300;
+	// -webkit-transition: all 0.5s ease;
+	// -webkit-transition-delay: 0.5s;
+	// transition: all 0.5s easy;
+	// transition-delay: 0.5s; 
 	// &._lock {
 	// 	overflow: hidden;
 	// }
