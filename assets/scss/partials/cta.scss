@@ -25,6 +25,8 @@
             @media (max-width: 767px) {
                 font-size: 14px;
                 line-height: 27px;
+                display: flex;
+                flex-direction: column;
             }
             a {
                 color: $color1;
