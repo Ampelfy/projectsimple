@@ -94,10 +94,11 @@
             @media (max-width: 767px) {
                 display: flex;
                 flex-direction: column;
-                font-size: 40px;
                 font-weight: 800;
-                line-height: 56px;
                 margin-bottom: 0;
+                font-size: 32px;
+                line-height: 48px;
+                padding: 0 8px;
             }
         }
         // .top__description
