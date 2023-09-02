@@ -362,3 +362,14 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
     -moz-appearance: textfield;
 }
+
+
+html {
+    @media screen and (max-width: 782px) {
+        margin-top: 0px !important;
+    }
+}
+
+html {
+    margin-top: 0px !important;
+}
