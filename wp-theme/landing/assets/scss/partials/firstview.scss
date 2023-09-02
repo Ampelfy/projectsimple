@@ -1,0 +1,127 @@
+//====================================================================================================
+// First View styles
+//====================================================================================================
+.firstview {
+    @include block;
+    	&::before {
+		content: '';
+		position: absolute;
+		top: 776px;
+		left: -50px;
+		background-image: url(../images/vector-left-1.png);
+		width: 494px;
+		height: 1162px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: -240px;
+		right: 0px;
+		background-image: url(../images/vector-right-1.png);
+		width: 508px;
+		height: 2168px;
+		z-index: -1;
+	}
+    // .firstview__top
+    &__top {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .toptitle {
+            display: flex;
+            justify-content: center;
+            max-width: 80%;
+        }
+        .powered {
+            position: absolute;
+            height: 37px;
+            background-color: $color1;
+            padding: 8px 16px;
+            margin-left: 10px;
+            @media (max-width: 767px) {
+                position: relative;
+                flex-direction: column;    
+                width: 138px;
+                margin: 24px auto 32px auto;            
+            }
+            p {
+                position: relative;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.35px;
+                background: linear-gradient(117deg, #3291FD 0%, #8666FD 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-wrap: nowrap;
+                @media (max-width: 767px) {
+                    letter-spacing: 0.35px;        
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    left: -26px;
+                    background-image: url(../images/poligon-arrow.png);
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+    }
+    .top {
+        position: relative;
+        // .top__title
+        &__title {
+            position: relative;
+            color: $color7;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 76px;
+            margin-bottom: 35px;
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column;
+                font-size: 40px;
+                font-weight: 800;
+                line-height: 56px;
+                margin-bottom: 24px;
+            }
+        }
+        // .top__description
+        &__description {
+            color: $color8;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            margin-bottom: 35px;
+            @media (max-width: 767px) {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 27px;
+                margin-bottom: 46px;
+            }
+            span {
+                font-weight: 600;
+                line-height: 34px;
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 27px;
+                }
+            }
+        }
+    }
+    // .firstview__bottom
+    &__bottom {
+        margin-top: 64px;
+        text-align: center;
+    }
+}

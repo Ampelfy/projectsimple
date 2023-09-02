@@ -1,0 +1,75 @@
+//====================================================================================================
+// Footer styles
+//====================================================================================================
+.footer {
+    @include block;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    // .footer__menu
+    &__menu {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+    // .footer__item
+    &__item {
+        width: 40px;
+        height: 40px;
+        margin-right: 16px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.policy {
+    color: $color8;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+.reserved {
+    color: $color8;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.terms {
+    color: $color8;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-left: 24px;
+}
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    margin: 8px 0 48px 0;
+    @media (max-width: 1365px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0 48px 0;
+    }
+    a {
+        &:first-child {
+            @media (max-width: 1365px) {
+                margin-bottom: 24px;
+            }
+        }
+        @media (max-width: 1365px) {
+            margin-left: 0px;
+        }
+    }
+}

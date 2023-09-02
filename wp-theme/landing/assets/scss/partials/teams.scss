@@ -1,0 +1,63 @@
+//====================================================================================================
+// Teams styles
+//====================================================================================================
+.teams {
+    @include block;
+    .titleblock {
+        max-width: 946px;
+        margin: 0 auto;
+    }
+}
+.menuteam {
+    margin-top: 80px;
+    padding: 64px 0;
+    background-color: $color1;
+	@media (max-width: 1365px) {
+        padding: 34px 0;
+	}
+		// .menuteam__list
+		&__list {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 0 20px;
+            @media (max-width: 1365px) {
+                flex-direction: column;
+            }
+		}
+		// .menuteam__item
+		&__item {
+            position: relative;
+            color: $color8;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 27px;
+            flex: 0 0 22%;
+            @media (max-width: 1365px) {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 27px;
+                margin-bottom: 32px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -15px;
+                width: 4px;
+                height: 54px;
+                background-color: rgba(80, 64, 209, 0.50);
+                border-radius: 1px;
+                @media (max-width: 1365px) {
+                    height: 100%;
+                }
+            }
+		}
+}
