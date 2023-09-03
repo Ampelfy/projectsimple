@@ -362,14 +362,143 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
     -moz-appearance: textfield;
 }
+//</Cookies>====================================================================================================
+.cky-revisit-bottom-left {
+    display: none !important;
+}
 
+.cky-consent-bar {
+    background-color: #6850D9 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
 
-html {
-    @media screen and (max-width: 782px) {
-        margin-top: 0px !important;
+.cky-notice-des {
+    p {
+        color: #ffffff !important;
+        @media (max-width: 1365px) {
+            text-align: center;
+        }
     }
 }
 
-html {
-    margin-top: 0px !important;
+.cky-policy {
+    display: none;
 }
+
+#wpadminbar {
+    @media screen and (max-width: 782px) {
+        top: -46px;
+    }
+}
+
+.cky-notice-btn-wrapper {
+    margin-left: 100px;
+    @media (min-width: 769px) and (max-width: 1365px) {
+        justify-content: center !important;
+        margin: 16px 0 0 0 !important;
+    }
+    @media (max-width: 768px) {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+    }
+    @media (max-width: 576px) {
+        justify-content: center !important;
+        flex-direction: column-reverse !important;
+    }
+    button {
+        flex: unset !important;
+        width: max-content;
+        padding: 14px 24px;
+        align-items: center;
+        border-radius: 30px;
+        background: #F6F8FA !important;
+        color: #5040D1 !important;
+        font-family: $fontFamily !important;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border: none !important;
+        margin: 0 16px 0 0 !important;
+        @media (max-width: 767px) {
+            margin: 0 0 16px 0 !important;
+            width: max-content !important;
+            padding: 14px 24px !important;
+        }
+    }
+    p {
+        margin-right: 63px;
+        a {
+            display: block;
+            width: max-content;
+            padding: 14px 24px;
+            align-items: center;
+            border-radius: 30px;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            font-family: $fontFamily !important;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        @media (min-width: 320px) and (max-width: 1365px) {
+            margin-right: 0px !important;
+        }
+    }
+}
+
+.cky-banner-btn-close {
+    opacity: 0.3;
+    background: url(../images/icons/cookies-close.svg) !important;
+    width: 16px !important;
+    height: 16px !important;
+    top: 40px !important;
+    right: 43px !important;
+    @media (min-width: 768px) and (max-width: 1365px) {
+        top: 18px !important;
+	}
+    @media (max-width: 767px) {
+        top: 48px !important;
+    }
+    img {
+        display: none !important;
+    }
+}
+
+.cky-notice-group {
+    justify-content: center !important;
+    @media (min-width: 768px) and (max-width: 1365px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .cky-notice-des {
+        @media (max-width: 767px) {
+            overflow-y: unset !important;
+            padding: 0 !important;
+        }
+        p {
+            color: #ffffff;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20.4px;
+        }
+    }
+}
+
+.cky-consent-bar {
+    padding: 16px 43px !important;
+    @media (min-width: 768px) and (max-width: 1365px) {
+        padding: 32px 43px !important;
+    }
+    @media (max-width: 767px) {
+        padding: 64px 20px 32px 20px !important;
+    }
+}
+//</Cookies>====================================================================================================

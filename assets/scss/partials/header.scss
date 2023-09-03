@@ -8,9 +8,13 @@
     height: 81px;
     padding: 14px 0;
     background-color: $color1;
-    // @media screen and (max-width: 782px) {
-    //     margin-top: 46px;
-    // }
+    transition: 0.2s;
+    &.show {
+        @media screen and (max-width: 782px) {
+            transition: 0.2s;
+            top: 0;
+        }
+    }
 }
 
 .activeHeader {

@@ -276,6 +276,24 @@ btn.on('click', function(e) {
   $('html, body').animate({scrollTop:0}, '300');
 });
 //=================
+//Header Scroll
+var headerScroll = $('#header');
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 46) {
+    headerScroll.addClass('show');
+  } else {
+    headerScroll.removeClass('show');
+  }
+});
+// window.onscroll = function() {scrollFunction()};
+// function scrollFunction() {
+//   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//     document.getElementById("header").style.top = "0px";
+//   } else {
+//     document.getElementById("header").style.top = "46px";
+//   }
+// }
+//=================
 //LoadMore
 $(function () {
   $(".loadmore__item").slice(0, 3).show();
@@ -336,3 +354,15 @@ const swiper = new Swiper('.swiper', {
 	  })
   })()
    
+//=================
+//Cookies
+let cookiesWrapper = document.createElement('p');
+let privacyLink ='<a href="https://landing.mv.co.ua/privacy-policy">Privacy policy</a>';
+cookiesWrapper.innerHTML = privacyLink;
+setTimeout(function() {document.querySelector('.cky-notice-btn-wrapper').append(cookiesWrapper);}, 50);
+
+
+
+
+
+
