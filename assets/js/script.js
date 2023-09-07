@@ -356,10 +356,10 @@ const swiper = new Swiper('.swiper', {
    
 //=================
 //Cookies
-let cookiesWrapper = document.createElement('p');
-let privacyLink ='<a href="https://landing.mv.co.ua/privacy-policy">Privacy policy</a>';
-cookiesWrapper.innerHTML = privacyLink;
-setTimeout(function() {document.querySelector('.cky-notice-btn-wrapper').append(cookiesWrapper);}, 50);
+// let cookiesWrapper = document.createElement('p');
+// let privacyLink ='<a href="https://landing.mv.co.ua/privacy-policy">Privacy policy</a>';
+// cookiesWrapper.innerHTML = privacyLink;
+// setTimeout(function() {document.querySelector('.cky-notice-btn-wrapper').append(cookiesWrapper);}, 50);
 
 
 

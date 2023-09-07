@@ -161,9 +161,10 @@
         &:first-child {
             @media (max-width: 767px) {
                 margin-right: 0;
-                margin-bottom: 24px;
+                margin-bottom: 0;
                 &:last-child {
                     margin-bottom: 0;
+                    display: none;
                 }
             }
         }
