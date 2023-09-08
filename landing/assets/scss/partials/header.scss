@@ -1,0 +1,201 @@
+//====================================================================================================
+// Header styles
+//====================================================================================================
+.header {
+    width: 100%;
+    height: 81px;
+    padding: 14px 0;
+    background-color: $color1;
+}
+.container {
+		&_flex {
+            display: flex;
+            align-items: center;
+		}
+}
+.logo {
+    a {
+    display: flex;
+    align-items: center;
+        img {
+            position: relative;
+        }
+    }
+}
+.menu {
+    margin-left: 100px;
+    @media (max-width: 1365px) {
+		display: none;
+	}
+		// .menu__list
+		&__list {
+            display: flex;
+		}
+		// .menu__item
+		&__item {
+            margin-right: 62px;
+            &:last-child {
+                margin-right: 0;
+            }
+		}
+		// .menu__link
+		&__link {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.35px;
+            color: $color6;
+		}
+}
+.auth {
+    margin-left: auto;
+    @media (max-width: 1365px) {
+		display: none;
+	}
+		// .auth__list
+		&__list {
+            display: flex;
+            align-items: center;
+		}
+		// .auth__item
+		&__item {
+            margin-right: 36px;
+            &:last-child {
+                margin-right: 0;
+            }
+		}
+}
+.menu-mobile {
+    position: relative;
+    display: none;
+    margin-left: auto;
+    transition: $transition300;
+    @media (max-width: 1365px) {
+		display: block;
+	}
+    .burger-nav {
+        position: relative;
+        width: 32px;
+        height: 2px;
+        background-color: #0E2333;
+        border-radius: 5px;
+        transition: $transition300;
+        cursor: pointer;
+        &._active {
+            background: none;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0;
+                width: 32px;
+                height: 2px;
+                background-color: #0E2333;
+                border-radius: 5px;
+                transform: rotate(-45deg);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                width: 32px;
+                height: 2px;
+                background-color: #0E2333;
+                border-radius: 5px;
+                transform: rotate(45deg);
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 32px;
+            height: 2px;
+            background-color: #0E2333;
+            border-radius: 5px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 32px;
+            height: 2px;
+            background-color: #0E2333;
+            border-radius: 5px;
+        }
+    }
+    .menumobile__list {
+        position: absolute;
+        top: 39px;
+        right: -33px;
+        background-color: #fff;
+        width: 100vw;
+        height: 200vw;
+        z-index: 99999;
+        transition: all 500ms ease-in-out;
+        display: none;
+        .list-top {
+            padding: 100px 95px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .menu__item {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+            .menu__link {
+                transition: $transition300;
+                &:hover {
+                    color: $color12;
+                }
+                &:active {
+                    color: $color12;
+                }
+            }
+        }
+        .list-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            li {
+                &:last-child {
+                    a {
+                        color: #504cd1;
+                        &:hover {
+                            background: linear-gradient(90deg, #3126CA 0%, #705AD8 100%);
+                            color: $color1;
+                        }
+                        &:active {
+                            background: linear-gradient(90deg, #1E13B1 0%, #5F46D2 100%);
+                            color: $color1;
+                        }
+                    }
+                }
+                
+            }
+            .menu__item {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+            .menu__link {
+                transition: $transition300;
+            }
+        }
+        &._active {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}
+
+
+
+
