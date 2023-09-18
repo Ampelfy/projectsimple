@@ -2,6 +2,7 @@
 // First View styles
 //====================================================================================================
 .firstview {
+    padding-top: 81px;
     @include block;
     	&::before {
 		content: '';
@@ -33,6 +34,9 @@
             display: flex;
             justify-content: center;
             max-width: 80%;
+            @media (max-width: 767px) {
+                max-width: 100%;       
+            }
         }
         .powered {
             position: absolute;
@@ -40,6 +44,7 @@
             background-color: $color1;
             padding: 8px 16px;
             margin-left: 10px;
+            box-shadow: 0px 6px 60px 0px rgba(121, 146, 189, 0.15);
             @media (max-width: 767px) {
                 position: relative;
                 flex-direction: column;    
@@ -56,7 +61,7 @@
                 background: linear-gradient(117deg, #3291FD 0%, #8666FD 100%);
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-                text-wrap: nowrap;
+                width: max-content;
                 @media (max-width: 767px) {
                     letter-spacing: 0.35px;        
                 }
@@ -68,6 +73,10 @@
                     background-image: url(../images/poligon-arrow.png);
                     width: 13px;
                     height: 13px;
+                    @media (max-width: 767px) {
+                        content: '';
+                        background-image: none;
+                    }
                 }
             }
         }
@@ -86,10 +95,11 @@
             @media (max-width: 767px) {
                 display: flex;
                 flex-direction: column;
-                font-size: 40px;
                 font-weight: 800;
-                line-height: 56px;
-                margin-bottom: 24px;
+                margin-bottom: 0;
+                font-size: 32px;
+                line-height: 48px;
+                padding: 0 8px;
             }
         }
         // .top__description
@@ -100,12 +110,15 @@
             font-weight: 400;
             line-height: 28px;
             margin-bottom: 35px;
+            @media (max-width: 1365px) {
+                max-width: 520px;
+            }
             @media (max-width: 767px) {
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 27px;
-                margin-bottom: 46px;
+                margin-bottom: 32px;
             }
             span {
                 font-weight: 600;
@@ -123,5 +136,22 @@
     &__bottom {
         margin-top: 64px;
         text-align: center;
+        img {
+            max-height: 700px;
+        }
+    }
+}
+
+#trial {
+    display: inline-block;
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+#demo {
+    display: none;
+    @media (max-width: 767px) {
+        display: inline-block;
     }
 }

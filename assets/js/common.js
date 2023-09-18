@@ -6,7 +6,20 @@ jQuery(document).ready(function ($){
 
     $(document).find('.header .list-bottom .menu__item:first-child a').addClass('_popup-link');
 
-    $(document).on('click', '.menu__item a', function (){ 
+    $(document).on('click', '.menu__item a', function (e){ 
+       e.preventDefault();
+     
+         if ( $(this).attr('href') === '#demo' ) {
+            
+           setTimeout(function(){
+              $(document).find('.popup.popup_demo').addClass('_active');
+              console.log('wqwqwq');
+            }, 200);
+            
+        } else {
+            $(document).find('.popup.popup_demo').removeClass('_active');
+        }
+        
         if ( $(this).attr('href') === '#contacts' ) {
         
           setTimeout(function(){
@@ -17,6 +30,12 @@ jQuery(document).ready(function ($){
         }else{
             $(document).find('.popup.popup_contacts').removeClass('_active');
         }
+        
+    });
+    
+     $(document).on('click', '.cta .container a', function (e){ 
+       e.preventDefault();
+       
         if ( $(this).attr('href') === '#demo' ) {
             
            setTimeout(function(){
@@ -27,6 +46,18 @@ jQuery(document).ready(function ($){
         } else {
             $(document).find('.popup.popup_demo').removeClass('_active');
         }
+        
+        if ( $(this).attr('href') === '#contacts' ) {
+        
+          setTimeout(function(){
+              $(document).find('.popup.popup_contacts').addClass('_active');
+              console.log('sasasas');
+          }, 200);
+            
+        }else{
+            $(document).find('.popup.popup_contacts').removeClass('_active');
+        }
+        
     });
     
     

@@ -5,15 +5,21 @@
 //<МИКСИНЫ>===============================================================================================
 @mixin block {
 	position: relative;
-	margin-top: 160px;
-	@media (max-width: 1366px) {
-		margin-top: 120px;
+	margin-bottom: 140px;
+	&:first-child {
+		margin-top: 140px;
+		@media (max-width: 1365px) {
+			margin-top: 80px;
+		}
+		@media (max-width: 767px) {
+			margin-top: 60px;
+		}
 	}
 	@media (max-width: 1365px) {
-		margin-top: 80px;
+		margin-bottom: 80px;
 	}
 	@media (max-width: 767px) {
-		margin-top: 60px;
+		margin-bottom: 60px;
 	}
 }
 @mixin transition200 {
@@ -37,11 +43,16 @@ $fontSize: 16;
 body {
 	position: relative;
 	font-family: $fontFamily;
-	background-color: $color2;
+    background-color: #F7F8FC;
 	transition: $transition300;
-	&._lock {
-		overflow: hidden;
-	}
+	// -webkit-transition: all 0.5s ease;
+	// -webkit-transition-delay: 0.5s;
+	// transition: all 0.5s easy;
+	// transition-delay: 0.5s; 
+	// &._lock {
+	// 	overflow: hidden;
+	// }
+	padding: 0 !important;
 	&.active {
 		background-color: #000;
 		color: #fff;
@@ -78,6 +89,24 @@ body {
 	}
 }
 
+.container-small {
+	max-width: $container-small + px;
+	margin: 0 auto;
+	padding: 0 1.25rem;
+	@media (max-width: 1365px) {
+		max-width: none;
+		padding: 0 34px;
+	}
+	@media (max-width: 767px) {
+		max-width: none;
+		padding: 0 20px;
+	}
+}
+
+.home-s4__wrapper {
+	display: none !important;
+}
+
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
@@ -95,6 +124,7 @@ body {
 @import "partials/slider";
 @import "partials/simplicity";
 @import "partials/testimonials";
+@import "partials/old-theme.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -103,12 +133,37 @@ body {
 	overflow: hidden;
 }
 
-//===================================================================================================================================
+.single-page {
+	margin: 0;
+}
 
-//</ОСНОВНОЙ БЛОК>====================================================================================================
+.single_content__text {
+	p {
+		margin-bottom: 12px;
+		strong {
+			margin: 24px 0 8px 0;
+		}
+	}
+}
+
+#wpadminbar {
+	@media screen and (max-width: 600px) {
+		position: fixed !important;
+	}
+}
+
 img {
     vertical-align: top;
     max-width: 100%;
 }
-//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+#top-lottiefiles-animate {
+	width: 1180px;
+	margin: 0 auto;
+	// svg {
+	// 	box-shadow: 0px 6px 60px 0px rgba(121, 146, 189, 0.15);
+	// }
+}
+//===================================================================================================================================
+
 

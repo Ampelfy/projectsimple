@@ -16,7 +16,7 @@
         </h1>
 
         <div class="single_top-info">
-           <div class="info__date">Updated at <?php the_date('Y-m-d'); ?></div>
+           <div class="info__date">Updated <?php the_date('Y-m-d'); ?></div>
         </div>
 
         <?php if( get_the_post_thumbnail_url()) { ?>

@@ -2,7 +2,6 @@
 // Footer styles
 //====================================================================================================
 .footer {
-    @include block;
     .container {
         display: flex;
         flex-direction: column;
@@ -27,7 +26,6 @@
 }
 .policy {
     color: $color8;
-    text-align: center;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -44,7 +42,6 @@
 }
 .terms {
     color: $color8;
-    text-align: center;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -62,10 +59,17 @@
         justify-content: center;
         margin: 40px 0 48px 0;
     }
+    @media (max-width: 767px) {
+        flex-direction: unset;
+    }
     a {
         &:first-child {
             @media (max-width: 1365px) {
                 margin-bottom: 24px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 0px;
+                margin-right: 24px;
             }
         }
         @media (max-width: 1365px) {

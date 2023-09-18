@@ -11,7 +11,7 @@
     overflow: hidden;
     z-index: 2;
       @media (max-width: 1365px) {
-        padding: 60px 0 55px 0;
+        padding: 60px 0 75px 0;
     }
     .container {
         text-align: center;
@@ -22,6 +22,12 @@
             font-weight: 400; 
             line-height: 30.6px;
             text-align: center;
+            @media (max-width: 767px) {
+                font-size: 14px;
+                line-height: 27px;
+                display: flex;
+                flex-direction: column;
+            }
             a {
                 color: $color1;
                 text-decoration: underline;
@@ -60,18 +66,16 @@
             font-size: 40px;
             font-style: normal;
             font-weight: 700;
-            line-height: 70px;
+            line-height: normal;
         }
         @media (max-width: 767px) {
-            font-size: 30px;
-            font-style: normal;
+            font-size: 23px;
             font-weight: 700;
-            line-height: normal;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-bottom: 95px;
+            margin-bottom: 42px;
         }
     }
     p {
@@ -82,10 +86,10 @@
         font-weight: 600;
         line-height: 34px;
         @media (max-width: 767px) {
-            font-size: 20px;
-            font-style: normal;
+            font-size: 14px;
             font-weight: 600;
-            line-height: 34px;
+            line-height: 27px;
+            margin-top: 0px;
         }
     }
     span {
@@ -101,12 +105,15 @@
         z-index: 2;
         bottom: 58px;
         right: -110px;
+        @media ((min-width: 768px) and (max-width: 1366px)) {
+            right: -20px;
+            bottom: 40px;
+        }
         @media (max-width: 767px) {
             position: relative;
             font-size: 14px;
             font-style: normal;
             font-weight: 800;
-            line-height: normal;
             width: max-content;
             margin-top: 20px;
             bottom: auto;
@@ -120,6 +127,9 @@
             background-image: url(../images/poligon-arrow-down.png);
             width: 9px;
             height: 9px;
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
     }
 }
@@ -135,6 +145,9 @@
         height: 277px;
         background-repeat: no-repeat;
         background-size: cover;
+        @media (max-width: 767px) {
+            height: 300px;
+        }
     }
 }
 .btngroup {
@@ -148,9 +161,10 @@
         &:first-child {
             @media (max-width: 767px) {
                 margin-right: 0;
-                margin-bottom: 24px;
+                margin-bottom: 0;
                 &:last-child {
                     margin-bottom: 0;
+                    display: none;
                 }
             }
         }
