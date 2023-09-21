@@ -125,6 +125,7 @@ body {
 @import "partials/simplicity";
 @import "partials/testimonials";
 @import "partials/old-theme.scss";
+@import "partials/test.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -158,7 +159,7 @@ img {
 }
 
 #top-lottiefiles-animate {
-	width: 1180px;
+	max-width: 1180px;
 	margin: 0 auto;
 	// svg {
 	// 	box-shadow: 0px 6px 60px 0px rgba(121, 146, 189, 0.15);
