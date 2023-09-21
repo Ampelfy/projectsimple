@@ -39,7 +39,21 @@ $mobile_demo_button_link = get_field( 'mobile_demo_button_link' );
                     </div>
 				</div>
 				<div class="firstview__bottom">
-					<img src="<?php echo $full_width_image['url']; ?>" alt="agile-right">
+        
+         <?php 
+				$anim_file = get_field( 'top_animation_file_in_json_format' );
+
+				if ( !empty( $anim_file['url'] ) ) :
+				?>
+            <div id="top-lottiefiles-animate"></div>
+
+        <?php else : ?>
+        
+          <a href="<?php echo $full_width_image['url']; ?>" data-lightbox="agile-right"><img src="<?php echo $full_width_image['url']; ?>" alt="agile-right" /></a>
+          
+        <?php endif; ?>
+        
+					
 				</div>
 			</div>
 		</div>

@@ -33,6 +33,8 @@ function my_load_scripts($hook) {
 	wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/assets/js/jquery-3.7.0.js', [], $ver, true);
 	wp_enqueue_script( 'inputmask', get_template_directory_uri() . '/assets/js/jquery.inputmask.js', [], $ver, true);
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', [], $ver, true);
+	wp_enqueue_script( 'lightbox-plus', get_template_directory_uri() . '/assets/js/lightbox-plus-jquery.min.js', [], $ver, true);
+	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/assets/js/lightbox.min.js', [], $ver, true);
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', [], $ver, true);
 	wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/assets/js/script.js', [], $ver, true);
 	wp_enqueue_script( 'common_js', get_template_directory_uri() . '/assets/js/common.js', [], $ver, true);
@@ -42,6 +44,7 @@ function my_load_scripts($hook) {
 
 	wp_enqueue_style( 'swiper-bundle-css', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', false, $ver );
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false, $ver );
+	wp_enqueue_style( 'lightbox-css', get_template_directory_uri() . '/assets/css/lightbox.min.css', false, $ver );
 	wp_enqueue_style( 'styles-css', get_template_directory_uri() . '/assets/css/styles.css', false, $ver );
 
 
@@ -116,7 +119,7 @@ function send_demo_email(){
 			$emails_arr = explode( ',', $email_to_send );
 			if ( !empty($emails_arr) ) {
 				foreach ( $emails_arr as $one_email ) { 
-					mail( trim($one_email), $subject, $body, $headers );
+					wp_mail( trim($one_email), $subject, $body, $headers );
 				}
 				$sent = "Thank you for your note. We'll reach out to you shortly";
 			}
@@ -157,7 +160,7 @@ function send_contacts_email(){
 			$emails_arr = explode( ',', $email_to_send );
 			if ( !empty($emails_arr) ) {
 				foreach ( $emails_arr as $one_email ) { 
-					mail( trim($one_email), $subject, $body, $headers );
+					wp_mail( trim($one_email), $subject, $body, $headers );
 				}
 				$sent = "Thank you for your note. We'll reach out to you shortly";
 			}

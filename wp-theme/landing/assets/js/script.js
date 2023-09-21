@@ -361,8 +361,8 @@ const swiper = new Swiper('.swiper', {
 // cookiesWrapper.innerHTML = privacyLink;
 // setTimeout(function() {document.querySelector('.cky-notice-btn-wrapper').append(cookiesWrapper);}, 50);
 
-
-
-
-
-
+//=================
+//Mask Phone
+$(document).ready(function() {
+	$('.phone').inputmask('(999) 999-9999');
+});

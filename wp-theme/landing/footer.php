@@ -27,6 +27,7 @@ $terms_link          = get_field( 'terms_link', 'option' );
 <!-- SCROLL TO TOP -->
 <a id="scrollToTop"></a>
 
+
 <?php wp_footer(); ?>
 
 
@@ -54,6 +55,10 @@ $terms_link          = get_field( 'terms_link', 'option' );
           document.cookie=c_name + "=" + c_value;
       }
       
+      
+     
+      
+      
     </script>
 
 
@@ -67,6 +72,27 @@ $terms_link          = get_field( 'terms_link', 'option' );
      <?php      
      }
   ?>
+  
+  
+  <?php 
+				$anim_file = get_field( 'top_animation_file_in_json_format' );
+
+				if ( !empty( $anim_file['url'] ) ) :
+				?>
+
+				<script>
+					const anim = lottie;
+
+					lottie.loadAnimation({
+						container: document.querySelector('#top-lottiefiles-animate'), // the dom element that will contain the animation
+						renderer: 'svg',
+						loop: true,
+						autoplay: true,
+						path: '<?php echo $anim_file['url']; ?>' // the path to the animation json
+					});
+				</script>
+
+				<?php endif; ?>
   
 
 </body>
