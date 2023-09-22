@@ -48,9 +48,11 @@ $mobile_demo_button_link = get_field( 'mobile_demo_button_link' );
             <div id="top-lottiefiles-animate"></div>
 
         <?php else : ?>
-        
-          <a href="<?php echo $full_width_image['url']; ?>" data-lightbox="agile-right"><img src="<?php echo $full_width_image['url']; ?>" alt="agile-right" /></a>
-          
+            <a data-fancybox="firstview"
+               data-src="<?php echo $full_width_image['url']; ?>"
+                >
+                <img src="<?php echo $full_width_image['url']; ?>" />
+            </a>
         <?php endif; ?>
         
 					

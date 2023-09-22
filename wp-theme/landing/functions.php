@@ -33,8 +33,7 @@ function my_load_scripts($hook) {
 	wp_enqueue_script( 'jquery_js', get_template_directory_uri() . '/assets/js/jquery-3.7.0.js', [], $ver, true);
 	wp_enqueue_script( 'inputmask', get_template_directory_uri() . '/assets/js/jquery.inputmask.js', [], $ver, true);
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', [], $ver, true);
-	wp_enqueue_script( 'lightbox-plus', get_template_directory_uri() . '/assets/js/lightbox-plus-jquery.min.js', [], $ver, true);
-	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/assets/js/lightbox.min.js', [], $ver, true);
+	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/assets/js/fancybox.umd.js', [], $ver, true);
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', [], $ver, true);
 	wp_enqueue_script( 'theme_js', get_template_directory_uri() . '/assets/js/script.js', [], $ver, true);
 	wp_enqueue_script( 'common_js', get_template_directory_uri() . '/assets/js/common.js', [], $ver, true);
@@ -44,7 +43,7 @@ function my_load_scripts($hook) {
 
 	wp_enqueue_style( 'swiper-bundle-css', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', false, $ver );
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false, $ver );
-	wp_enqueue_style( 'lightbox-css', get_template_directory_uri() . '/assets/css/lightbox.min.css', false, $ver );
+	wp_enqueue_style( 'fancybox-css', get_template_directory_uri() . '/assets/css/fancybox.css', false, $ver );
 	wp_enqueue_style( 'styles-css', get_template_directory_uri() . '/assets/css/styles.css', false, $ver );
 
 

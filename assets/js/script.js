@@ -371,3 +371,4 @@ $(document).ready(function() {
 Fancybox.bind('[data-fancybox="firstview"]', {
 	wheel: false,
 });
+//=================
