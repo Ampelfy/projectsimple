@@ -8,14 +8,17 @@
         // .titleblock__title
         &__title {
             @media (max-width: 767px) {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                justify-content: flex-start;
+                align-items: flex-start;
+                max-width: 170px;
+                text-align: left;
             }
         }
         // .titleblock__description
         &__description {
+            @media (max-width: 767px) {
+                text-align: left;
+            }
         }
     }
     // .simplicity__menu
