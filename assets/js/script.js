@@ -366,4 +366,11 @@ const swiper = new Swiper('.swiper', {
 $(document).ready(function() {
 	$('.phone').inputmask('(999) 999-9999');
 });
-
+//=================
+//Lightbox Options
+const container = document.getElementById("myPanzoom");
+const instance = new Panzoom(container, {
+	extraZoomFactor: 2,
+	click: "toggleZoom",
+	wheel: false,
+});
