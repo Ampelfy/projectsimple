@@ -366,3 +366,8 @@ const swiper = new Swiper('.swiper', {
 $(document).ready(function() {
 	$('.phone').inputmask('(999) 999-9999');
 });
+//=================
+//Fancybox Options
+Fancybox.bind('[data-fancybox="firstview"]', {
+	wheel: false,
+});
