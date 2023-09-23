@@ -373,7 +373,6 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 	fancyboxScript.src = "./assets/js/fancybox.umd.js";
 	fancyboxScript.type = "text/javascript";
 	fancyboxScript.onload = function() {
-		// Инициализируем Fancybox здесь
 		Fancybox.bind('[data-fancybox="firstview"]', {
 			wheel: false,
 		});
@@ -381,3 +380,6 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 	document.body.appendChild(fancyboxScript);
 }
 //=================
+
+
+
