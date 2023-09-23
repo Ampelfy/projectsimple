@@ -368,7 +368,16 @@ $(document).ready(function() {
 });
 //=================
 //Fancybox Options
-Fancybox.bind('[data-fancybox="firstview"]', {
-	wheel: false,
-});
+if (window.matchMedia("(max-width: 768px)").matches) {
+	let fancyboxScript = document.createElement("script");
+	fancyboxScript.src = "./assets/js/fancybox.umd.js";
+	fancyboxScript.type = "text/javascript";
+	fancyboxScript.onload = function() {
+		// Инициализируем Fancybox здесь
+		Fancybox.bind('[data-fancybox="firstview"]', {
+			wheel: false,
+		});
+	};
+	document.body.appendChild(fancyboxScript);
+}
 //=================

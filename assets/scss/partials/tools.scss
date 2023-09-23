@@ -35,7 +35,9 @@
         // .titleblock__title
         &__title {
             text-align: left;
-            max-width: 300px;
+            @media (max-width: 767px) {
+                max-width: 300px;
+            }
             span {
                 @media (max-width: 767px) {
                     text-wrap: nowrap;
