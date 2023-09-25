@@ -376,6 +376,9 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 		Fancybox.bind('[data-fancybox="firstview"]', {
 			wheel: false,
 		});
+		Fancybox.bind('[data-fancybox="tools"]', {
+			wheel: false,
+		});
 	};
 	document.body.appendChild(fancyboxScript);
 }
