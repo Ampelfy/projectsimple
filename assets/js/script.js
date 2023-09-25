@@ -368,20 +368,20 @@ $(document).ready(function() {
 });
 //=================
 //Fancybox Options
-if (window.matchMedia("(max-width: 768px)").matches) {
-	let fancyboxScript = document.createElement("script");
-	fancyboxScript.src = "./assets/js/fancybox.umd.js";
-	fancyboxScript.type = "text/javascript";
-	fancyboxScript.onload = function() {
-		Fancybox.bind('[data-fancybox="firstview"]', {
-			wheel: false,
-		});
-		Fancybox.bind('[data-fancybox="tools"]', {
-			wheel: false,
-		});
-	};
-	document.body.appendChild(fancyboxScript);
-}
+// if (window.matchMedia("(max-width: 768px)").matches) {
+// 	let fancyboxScript = document.createElement("script");
+// 	fancyboxScript.src = "./assets/js/fancybox.umd.js";
+// 	fancyboxScript.type = "text/javascript";
+// 	fancyboxScript.onload = function() {
+// 		Fancybox.bind('[data-fancybox="firstview"]', {
+// 			wheel: false,
+// 		});
+// 		Fancybox.bind('[data-fancybox="tools"]', {
+// 			wheel: false,
+// 		});
+// 	};
+// 	document.body.appendChild(fancyboxScript);
+// }
 //=================
 
 $('.slider-for').slick({
